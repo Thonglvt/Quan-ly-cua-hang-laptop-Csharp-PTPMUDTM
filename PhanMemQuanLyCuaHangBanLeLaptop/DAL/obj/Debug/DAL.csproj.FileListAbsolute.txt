@@ -1,0 +1,9 @@
+E:\PTPM&UDTM\PhanMemQuanLyCuaHangBanLeLaptop\DAL\bin\Debug\DAL.dll
+E:\PTPM&UDTM\PhanMemQuanLyCuaHangBanLeLaptop\DAL\bin\Debug\DAL.pdb
+E:\PTPM&UDTM\PhanMemQuanLyCuaHangBanLeLaptop\DAL\bin\Debug\DTO.dll
+E:\PTPM&UDTM\PhanMemQuanLyCuaHangBanLeLaptop\DAL\bin\Debug\DTO.pdb
+E:\PTPM&UDTM\PhanMemQuanLyCuaHangBanLeLaptop\DAL\bin\Debug\DTO.dll.config
+E:\PTPM&UDTM\PhanMemQuanLyCuaHangBanLeLaptop\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\PTPM&UDTM\PhanMemQuanLyCuaHangBanLeLaptop\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\PTPM&UDTM\PhanMemQuanLyCuaHangBanLeLaptop\DAL\obj\Debug\DAL.dll
+E:\PTPM&UDTM\PhanMemQuanLyCuaHangBanLeLaptop\DAL\obj\Debug\DAL.pdb

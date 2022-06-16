@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_Laptop" Class="QL_LaptopDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MMT-LEVANTHONG\SQLEXPRESS;Initial Catalog=QL_Laptop;Persist Security Info=True;User ID=sa" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="QL_LaptopConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Account" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="username" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="Char(32)" CanBeNull="true" />
+      <Column Name="account_type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMenu" Member="tblMenus">
+    <Type Name="tblMenu">
+      <Column Name="MaMenu" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenMenu" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="ParentMenu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblNguoiDungNhomNguoiDung" Member="tblNguoiDungNhomNguoiDungs">
+    <Type Name="tblNguoiDungNhomNguoiDung">
+      <Column Name="username" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaNhomNguoiDung" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblNhomNguoiDung" Member="tblNhomNguoiDungs">
+    <Type Name="tblNhomNguoiDung">
+      <Column Name="MaNhom" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenNhom" Type="System.String" DbType="Char(32)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPhanQuyen" Member="tblPhanQuyens">
+    <Type Name="tblPhanQuyen">
+      <Column Name="MaNhomNguoiDung" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaMenu" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CoQuyen" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="setTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employees" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="id" Type="System.String" DbType="Char(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="birthday" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="cmnd" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="salary" Type="System.Decimal" DbType="Decimal(32,0)" CanBeNull="true" />
+      <Column Name="avatar" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="hire_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChiTietPhieuNhap" Member="ChiTietPhieuNhaps">
+    <Type Name="ChiTietPhieuNhap">
+      <Column Name="PhieuNhap_id" Type="System.String" DbType="Char(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="product_id" Type="System.String" DbType="Char(9) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="quanlity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="price_Import" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ratio" Type="System.Decimal" DbType="Decimal(32,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="id" Type="System.String" DbType="Char(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="birthday" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="cmnd" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="avatar" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="countProducts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="totalMoney" Type="System.Decimal" DbType="Decimal(32,0)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(3000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Description" Member="Descriptions">
+    <Type Name="Description">
+      <Column Name="product_id" Type="System.String" DbType="Char(9) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="content" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="image_" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Image" Member="ImagePrds">
+    <Type Name="ImagePrd">
+      <Column Name="product_id" Type="System.String" DbType="Char(9) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="image_" Type="System.String" DbType="NVarChar(1000) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="dateUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhieuNhap" Member="PhieuNhaps">
+    <Type Name="PhieuNhap">
+      <Column Name="id" Type="System.String" DbType="Char(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="employee_id" Type="System.String" DbType="Char(16)" CanBeNull="true" />
+      <Column Name="date_" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhieuXuat" Member="PhieuXuats">
+    <Type Name="PhieuXuat">
+      <Column Name="id" Type="System.String" DbType="Char(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="employee_id" Type="System.String" DbType="Char(16)" CanBeNull="true" />
+      <Column Name="customer_id" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="date_" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="total" Type="System.Decimal" DbType="Decimal(32,0)" CanBeNull="true" />
+      <Column Name="Address_" Type="System.String" DbType="NVarChar(3000)" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.promotions" Member="promotions">
+    <Type Name="promotion">
+      <Column Name="product_id" Type="System.String" DbType="Char(9) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="date_start" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="date_end" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(32,0)" CanBeNull="true" />
+      <Column Name="price_after" Type="System.Decimal" DbType="Decimal(32,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PromotionsGift" Member="PromotionsGifts">
+    <Type Name="PromotionsGift">
+      <Column Name="product_id" Type="System.String" DbType="Char(9) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="gift1" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="gift2" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="gift3" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="gift4" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="priceSum" Type="System.Decimal" DbType="Decimal(32,0)" CanBeNull="true" />
+      <Column Name="date_start" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="date_end" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Trademark" Member="Trademarks">
+    <Type Name="Trademark">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Products" Member="Products">
+    <Type Name="Product">
+      <Column Name="id" Type="System.String" DbType="Char(9) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="quanlity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="purchase" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(32,0)" CanBeNull="true" />
+      <Column Name="trademark_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="avatar" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="view_" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Detail" Member="Details">
+    <Type Name="Detail">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="product_id" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="CPU" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="SoNhan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Speed" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="MaxSpeed" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Cache" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="RAM" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="RAM_type" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="BusRAM" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="MaxRAM" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="OCung" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="ManHinh" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="DoPhanGiai" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="TanSoQuet" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="CongNgheManHinh" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="VGA" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="AmThanh" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="CongGiaoTiep" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="KetNoiKhongDay" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Webcam" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="TinhNangKhac" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="DenBanPhim" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="SizeAndWeight" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="ChatLieu" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Pin" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="HeDieuHanh" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="RaMat" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChiTietPhieuXuat" Member="ChiTietPhieuXuats">
+    <Type Name="ChiTietPhieuXuat">
+      <Column Name="phieuXuat_id" Type="System.String" DbType="Char(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="product_id" Type="System.String" DbType="Char(9) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="quanlity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(32,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblTinhThanhPho" Member="tblTinhThanhPhos">
+    <Type Name="tblTinhThanhPho">
+      <Column Name="MaTinhThanhPho" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenTinhThanhPho" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblQuanHuyen" Member="tblQuanHuyens">
+    <Type Name="tblQuanHuyen">
+      <Column Name="MaQuanHuyen" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaTinhThanhPho" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TenQuanHuyen" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPhuongXa" Member="tblPhuongXas">
+    <Type Name="tblPhuongXa">
+      <Column Name="MaPhuongXa" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaQuanHuyen" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TenPhuongXa" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
