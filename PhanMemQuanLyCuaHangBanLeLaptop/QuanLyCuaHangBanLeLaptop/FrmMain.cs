@@ -186,5 +186,10 @@ namespace QuanLyCuaHangBanLeLaptop
         {
             addForm(typeof(FrmKhuyenMai));
         }
+
+        private void cn010203_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            addForm(typeof(FrmHoaDonBanHang));
+        }
     }
 }

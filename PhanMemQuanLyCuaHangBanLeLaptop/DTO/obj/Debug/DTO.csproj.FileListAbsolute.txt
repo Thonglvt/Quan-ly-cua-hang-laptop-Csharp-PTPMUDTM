@@ -11,3 +11,16 @@ E:\PTPM&UDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\bin\Debug\Microsoft.IO.Recyclab
 E:\PTPM&UDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\bin\Debug\EPPlus.xml
 E:\PTPM&UDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
 E:\PTPM&UDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\obj\Debug\DTO.csproj.CopyComplete
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\bin\Debug\DTO.dll.config
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\bin\Debug\DTO.dll
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\bin\Debug\DTO.pdb
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\bin\Debug\EPPlus.dll
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\bin\Debug\EPPlus.Interfaces.dll
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\bin\Debug\EPPlus.System.Drawing.dll
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\bin\Debug\EPPlus.xml
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\obj\Debug\DTO.csproj.CopyComplete
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\obj\Debug\DTO.dll
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DTO\obj\Debug\DTO.pdb

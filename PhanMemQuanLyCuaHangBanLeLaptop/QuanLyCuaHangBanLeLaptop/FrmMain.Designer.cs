@@ -61,6 +61,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbThongTinNhanVien = new DevExpress.XtraBars.BarHeaderItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.cn010401 = new DevExpress.XtraBars.BarButtonItem();
+            this.cn010203 = new DevExpress.XtraBars.BarButtonItem();
             this.cn01 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.cn0101 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.cn0102 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -112,10 +113,11 @@ namespace QuanLyCuaHangBanLeLaptop
             this.cn010302,
             this.lbThongTinNhanVien,
             this.barStaticItem1,
-            this.cn010401});
+            this.cn010401,
+            this.cn010203});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl.MaxItemId = 31;
+            this.ribbonControl.MaxItemId = 32;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.cn01,
@@ -354,6 +356,16 @@ namespace QuanLyCuaHangBanLeLaptop
             this.cn010401.Name = "cn010401";
             this.cn010401.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.cn010401_ItemClick);
             // 
+            // cn010203
+            // 
+            this.cn010203.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            this.cn010203.Caption = "Thống kê";
+            this.cn010203.Id = 31;
+            this.cn010203.ImageOptions.Image = global::QuanLyCuaHangBanLeLaptop.Properties.Resources.chart_16x16;
+            this.cn010203.ImageOptions.LargeImage = global::QuanLyCuaHangBanLeLaptop.Properties.Resources.chart_32x32;
+            this.cn010203.Name = "cn010203";
+            this.cn010203.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.cn010203_ItemClick);
+            // 
             // cn01
             // 
             this.cn01.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -376,6 +388,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             this.cn0102.ItemLinks.Add(this.cn010201, true);
             this.cn0102.ItemLinks.Add(this.cn010202);
+            this.cn0102.ItemLinks.Add(this.cn010203);
             this.cn0102.Name = "cn0102";
             this.cn0102.Text = "Hành động";
             // 
@@ -511,6 +524,7 @@ namespace QuanLyCuaHangBanLeLaptop
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraBars.BarButtonItem cn010401;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup cn0104;
+        private DevExpress.XtraBars.BarButtonItem cn010203;
     }
 }
 

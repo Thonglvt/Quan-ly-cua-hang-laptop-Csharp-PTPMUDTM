@@ -21,7 +21,7 @@ namespace QuanLyCuaHangBanLeLaptop
         public DialogThemKhachHangMoi(string sdt)
         {
             InitializeComponent();
-            txtSDT.Text = "0396210100";
+            txtSDT.Text = sdt;
         }
 
 

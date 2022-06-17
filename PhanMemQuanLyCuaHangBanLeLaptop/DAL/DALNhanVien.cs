@@ -18,6 +18,11 @@ namespace DAL
                       { id = a.id, name = a.name };
             return lst.ToList();
         }
+        public List<Employee> getAll_NV()
+        {
+            db = new QL_LaptopDataContext();
+            return db.Employees.ToList();
+        }
         public Employee getNhanVienTheoUsername(string pUser)
         {
             db = new QL_LaptopDataContext();

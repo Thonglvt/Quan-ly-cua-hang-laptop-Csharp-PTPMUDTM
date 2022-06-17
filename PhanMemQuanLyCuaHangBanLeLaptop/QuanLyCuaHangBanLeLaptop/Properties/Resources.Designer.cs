@@ -451,6 +451,26 @@ namespace QuanLyCuaHangBanLeLaptop.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chart_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("chart_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chart_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("chart_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage checkbox {
@@ -477,6 +497,26 @@ namespace QuanLyCuaHangBanLeLaptop.Properties {
             get {
                 object obj = ResourceManager.GetObject("checkbox_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage checkbox1 {
+            get {
+                object obj = ResourceManager.GetObject("checkbox1", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage checkbox2 {
+            get {
+                object obj = ResourceManager.GetObject("checkbox2", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }
         
@@ -583,6 +623,26 @@ namespace QuanLyCuaHangBanLeLaptop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage del4 {
+            get {
+                object obj = ResourceManager.GetObject("del4", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage del5 {
+            get {
+                object obj = ResourceManager.GetObject("del5", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);
@@ -653,6 +713,36 @@ namespace QuanLyCuaHangBanLeLaptop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap drilldownonseries_chart_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("drilldownonseries_chart_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edittask_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("edittask_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edittask_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("edittask_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap employee_16x16 {
             get {
                 object obj = ResourceManager.GetObject("employee_16x16", resourceCulture);
@@ -697,6 +787,16 @@ namespace QuanLyCuaHangBanLeLaptop.Properties {
             get {
                 object obj = ResourceManager.GetObject("exit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage high {
+            get {
+                object obj = ResourceManager.GetObject("high", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }
         
@@ -916,6 +1016,16 @@ namespace QuanLyCuaHangBanLeLaptop.Properties {
         internal static DevExpress.Utils.Svg.SvgImage paymentrefund {
             get {
                 object obj = ResourceManager.GetObject("paymentrefund", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage paymentrefund1 {
+            get {
+                object obj = ResourceManager.GetObject("paymentrefund1", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }
@@ -1183,6 +1293,16 @@ namespace QuanLyCuaHangBanLeLaptop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap saveall_16x161 {
+            get {
+                object obj = ResourceManager.GetObject("saveall_16x161", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap saveall_32x32 {
             get {
                 object obj = ResourceManager.GetObject("saveall_32x32", resourceCulture);
@@ -1196,6 +1316,16 @@ namespace QuanLyCuaHangBanLeLaptop.Properties {
         internal static System.Drawing.Bitmap saveall_32x321 {
             get {
                 object obj = ResourceManager.GetObject("saveall_32x321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap saveall_32x322 {
+            get {
+                object obj = ResourceManager.GetObject("saveall_32x322", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

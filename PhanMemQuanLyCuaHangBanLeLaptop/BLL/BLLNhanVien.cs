@@ -22,5 +22,10 @@ namespace BLL
             dalNhanVien = new DALNhanVien();
             return dalNhanVien.getNhanVienTheoUsername(pUser);
         }
+        public List<Employee> getAll_NV()
+        {
+            dalNhanVien = new DALNhanVien();
+            return dalNhanVien.getAll_NV();
+        }
     }
 }

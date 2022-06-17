@@ -45,16 +45,20 @@ namespace DAL
         public string createIDPhieuXuat()
         {
             db = new QL_LaptopDataContext();
-            string PXIDLast;
+            string IDLast;
             string dateNow = DateTime.Now.ToShortDateString(); //lấy theo định dạng DD/MM/YYYY
             dateNow = dateNow.Replace("/", "");
             string ID = "";
             try
             {
                 //Lấy mã cuối cùng
-                PXIDLast = db.PhieuXuats.OrderByDescending(p => p.id.Substring(11, 6)).Select(p => p.id).First().ToString();
-                //Ép thành Int
-                int IDInt = int.Parse(PXIDLast);
+                var hdLast = db.PhieuXuats.Where(t => t.id.StartsWith(dateNow)).OrderByDescending(a => a.id).Select(t => t.id).First();
+
+                if (hdLast == null)
+                {
+                    ID = dateNow + "HD" + "0000000";
+                }
+                int IDInt = Convert.ToInt32(hdLast.Substring(10, 6));
                 //Thực hiện tăng dần
                 ID = dateNow + "HD";
                 if (IDInt >= 0 && IDInt < 9)
@@ -65,11 +69,11 @@ namespace DAL
                     ID += "000" + (IDInt + 1);
                 else if (IDInt >= 999 && IDInt < 9999)
                     ID += "00" + (IDInt + 1);
-                else if (IDInt >= 9999 && IDInt < 99999)
+                else
                     ID += "0" + (IDInt + 1);
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return dateNow + "HD000000";
             }

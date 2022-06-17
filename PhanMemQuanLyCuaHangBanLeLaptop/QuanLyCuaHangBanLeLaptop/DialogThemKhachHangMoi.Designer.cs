@@ -29,10 +29,12 @@ namespace QuanLyCuaHangBanLeLaptop
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DialogThemKhachHangMoi));
             this.lcMain = new DevExpress.XtraLayout.LayoutControl();
+            this.txtCMND = new DevExpress.XtraEditors.TextEdit();
+            this.txtSDT = new DevExpress.XtraEditors.TextEdit();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.txtSoNha = new DevExpress.XtraEditors.MemoEdit();
             this.cboPhuongXa = new System.Windows.Forms.ComboBox();
             this.cboQuanHuyen = new System.Windows.Forms.ComboBox();
@@ -54,14 +56,15 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbEmail = new DevExpress.XtraLayout.LayoutControlItem();
             this.lbGioiTinh = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtSDT = new DevExpress.XtraEditors.TextEdit();
             this.lbSDT = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtCMND = new DevExpress.XtraEditors.TextEdit();
             this.lbCMND = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).BeginInit();
             this.lcMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCMND.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoNha.Properties)).BeginInit();
@@ -81,12 +84,10 @@ namespace QuanLyCuaHangBanLeLaptop
             ((System.ComponentModel.ISupportInitialize)(this.lbEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbGioiTinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbSDT)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCMND.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbCMND)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // lcMain
@@ -112,6 +113,26 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lcMain.TabIndex = 0;
             this.lcMain.Text = "layoutControl1";
             // 
+            // txtCMND
+            // 
+            this.txtCMND.Location = new System.Drawing.Point(751, 142);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtCMND.Properties.Appearance.Options.UseFont = true;
+            this.txtCMND.Size = new System.Drawing.Size(388, 28);
+            this.txtCMND.StyleController = this.lcMain;
+            this.txtCMND.TabIndex = 19;
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(168, 142);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtSDT.Properties.Appearance.Options.UseFont = true;
+            this.txtSDT.Size = new System.Drawing.Size(430, 28);
+            this.txtSDT.StyleController = this.lcMain;
+            this.txtSDT.TabIndex = 18;
+            // 
             // layoutControl1
             // 
             this.layoutControl1.Location = new System.Drawing.Point(24, 351);
@@ -128,20 +149,6 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(958, 58);
             this.layoutControlGroup1.TextVisible = false;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnThem.Appearance.Options.UseFont = true;
-            this.btnThem.ImageOptions.Image = global::QuanLyCuaHangBanLeLaptop.Properties.Resources.addKH;
-            this.btnThem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnThem.Location = new System.Drawing.Point(986, 351);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(158, 58);
-            this.btnThem.StyleController = this.lcMain;
-            this.btnThem.TabIndex = 15;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtSoNha
             // 
@@ -389,15 +396,6 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.btnThem;
-            this.layoutControlItem2.Location = new System.Drawing.Point(962, 301);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(162, 62);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.layoutControl1;
@@ -406,16 +404,6 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlItem4.Size = new System.Drawing.Size(962, 62);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(168, 142);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtSDT.Properties.Appearance.Options.UseFont = true;
-            this.txtSDT.Size = new System.Drawing.Size(430, 28);
-            this.txtSDT.StyleController = this.lcMain;
-            this.txtSDT.TabIndex = 18;
             // 
             // lbSDT
             // 
@@ -430,16 +418,6 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbSDT.Text = "Số điện thoại";
             this.lbSDT.TextSize = new System.Drawing.Size(136, 21);
             // 
-            // txtCMND
-            // 
-            this.txtCMND.Location = new System.Drawing.Point(751, 142);
-            this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtCMND.Properties.Appearance.Options.UseFont = true;
-            this.txtCMND.Size = new System.Drawing.Size(388, 28);
-            this.txtCMND.StyleController = this.lcMain;
-            this.txtCMND.TabIndex = 19;
-            // 
             // lbCMND
             // 
             this.lbCMND.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -452,18 +430,44 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbCMND.Text = "CMND/CCCD";
             this.lbCMND.TextSize = new System.Drawing.Size(136, 21);
             // 
+            // btnThem
+            // 
+            this.btnThem.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnThem.Appearance.Options.UseFont = true;
+            this.btnThem.ImageOptions.Image = global::QuanLyCuaHangBanLeLaptop.Properties.Resources.addKH;
+            this.btnThem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnThem.Location = new System.Drawing.Point(986, 351);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(158, 58);
+            this.btnThem.StyleController = this.lcMain;
+            this.btnThem.TabIndex = 15;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.btnThem;
+            this.layoutControlItem2.Location = new System.Drawing.Point(962, 301);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(162, 62);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
             // DialogThemKhachHangMoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1168, 433);
             this.Controls.Add(this.lcMain);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("DialogThemKhachHangMoi.IconOptions.Image")));
             this.Name = "DialogThemKhachHangMoi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "THÊM KHÁCH HÀNG";
             this.Load += new System.EventHandler(this.DialogThemKhachHangMoi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lcMain)).EndInit();
             this.lcMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtCMND.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoNha.Properties)).EndInit();
@@ -483,12 +487,10 @@ namespace QuanLyCuaHangBanLeLaptop
             ((System.ComponentModel.ISupportInitialize)(this.lbEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbGioiTinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbSDT)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCMND.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbCMND)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
 
         }

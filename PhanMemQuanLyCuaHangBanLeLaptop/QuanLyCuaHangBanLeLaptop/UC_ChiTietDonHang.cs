@@ -22,8 +22,8 @@ namespace QuanLyCuaHangBanLeLaptop
         {
             InitializeComponent();
             this.MaHD = pMaPX;
-            lstCTPX = bllHoaDon.GetChiTietPhieuXuatsByID(pMaPX);
-            gridControlCTHD.DataSource = lstCTPX;
+            bllHoaDon = new BLLHoaDonBanHang();
+            gridControlCTHD.DataSource = bllHoaDon.GetChiTietPhieuXuats_Prod_KH_ByID(pMaPX);
         }
 
         private void UC_ChiTietDonHang_Load(object sender, EventArgs e)
@@ -39,8 +39,8 @@ namespace QuanLyCuaHangBanLeLaptop
 
         private void BtnLuu_Click(object sender, EventArgs e)
         {
-            var prodID = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["product_id"]);
-            var soLuong = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns["quanlity"]);
+            var prodID = gvCTHD.GetRowCellValue(gvCTHD.FocusedRowHandle, gvCTHD.Columns["product_id"]);
+            var soLuong = gvCTHD.GetRowCellValue(gvCTHD.FocusedRowHandle, gvCTHD.Columns["quanlity"]);
             
             //Kiểm tra số lượng
 
@@ -49,6 +49,11 @@ namespace QuanLyCuaHangBanLeLaptop
         private void btnDong_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void gridControlCTHD_Click(object sender, EventArgs e)
+        {
+
         }
         //void checkHD(string pKQ)
         //{

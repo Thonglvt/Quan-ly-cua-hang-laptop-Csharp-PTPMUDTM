@@ -29,49 +29,24 @@ namespace QuanLyCuaHangBanLeLaptop
             InitializeComponent();
         }
 
+        #region Method
         void loadData()
         {
             bllHoaDonBH = new BLLHoaDonBanHang();
-            gridControlPhieuXuat.DataSource = bllHoaDonBH.lstPhieuXuat_KH().OrderByDescending(t => t.date_);
+            cboThongKe.Items.Add("Nhân viên");
+            cboThongKe.Items.Add("Ngày lập hóa đơn");
+
+            cboTrangThai.Items.Add("Đã thanh toán");
+            cboTrangThai.Items.Add("Chưa thanh toán");
         }
         void loadLookupEdit()
         {
             bllNhanVien = new BLLNhanVien();
-            LookUpEditNhanVien.DataSource = bllNhanVien.lstMaTenNhanVien();
-            LookUpEditNhanVien.DisplayMember = "name";
-            LookUpEditNhanVien.ValueMember = "id";
-
+            sleNV.Properties.DataSource = bllNhanVien.getAll_NV();
+            sleNV.Properties.DisplayMember = "name";
+            sleNV.Properties.ValueMember = "id";
         }
-        private void FrmHoaDonBanHang_Load(object sender, EventArgs e)
-        {
-            loadData();
-            btnDetailDH.Click += BtnDetailDH_Click;
-        }
-        private void BtnDetailDH_Click(object sender, EventArgs e)
-        {
-            var maSP = gridViewPhieuXuat.GetRowCellValue(gridViewPhieuXuat.FocusedRowHandle, gridViewPhieuXuat.Columns["id"]);
-            if (maSP != null)
-            {
-                var dlg = VBFlyoutDialog.ShowFormPopup(this, null, new UC_ChiTietDonHang(maSP.ToString()));
-                if (dlg == DialogResult.OK)
-                {
-                    //lbl_username.Text = login.UserName;
-                    //lblPassword.Text = login.Password;
-                    //lblRemember.Text = login.isRemember.ToString();
-                }
-            }
-        }
-
-
-        
-
-        private void FrmHoaDonBanHang_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            gridViewPhieuXuat.SaveLayoutToXml("data.xml", OptionsLayoutBase.FullLayout);
-        }
-
         //Custom gridview
-        #region
         //Menu item click handler 
         void OnFixedClick(object sender, EventArgs e)
         {
@@ -144,18 +119,61 @@ namespace QuanLyCuaHangBanLeLaptop
             flagGraphics.FillRectangle(new SolidBrush(color), 1, 1, 14, 14);
             return flag;
         }
-        class MenuInfo
-        {
-            public MenuInfo(GridColumn column, FixedStyle style)
-            {
-                this.Column = column;
-                this.Style = style;
-            }
-            public FixedStyle Style;
-            public GridColumn Column;
-        }
         #endregion
 
+        #region Event
+        private void FrmHoaDonBanHang_Load(object sender, EventArgs e)
+        {
+            loadData();
+            loadLookupEdit();
+            btnDetailDH.Click += BtnDetailDH_Click;
+        }
+        private void BtnDetailDH_Click(object sender, EventArgs e)
+        {
+            var maSP = gvPhieuXuat.GetRowCellValue(gvPhieuXuat.FocusedRowHandle, gvPhieuXuat.Columns["id"]);
+            if (maSP != null)
+            {
+                var dlg = VBFlyoutDialog.ShowFormPopup(this, null, new UC_ChiTietDonHang(maSP.ToString()));
+                if (dlg == DialogResult.OK)
+                {
+                    //lbl_username.Text = login.UserName;
+                    //lblPassword.Text = login.Password;
+                    //lblRemember.Text = login.isRemember.ToString();
+                }
+            }
+        }
+        private void gridViewPhieuXuat_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            GridView View = sender as GridView;
+            //doi mau row chẵn
+            if (e.RowHandle >= 0)
+            {
+                if (e.RowHandle % 2 == 0)
+                {
+                    e.Appearance.BackColor = Color.MintCream;
+                }
+            }
+            //Doi mau cell cua colummn status,
+            //neu co gia tri Actived thi co mau xanh,
+            //neu co gia tri N/A thi co màu đỏ
+            if (e.Column.FieldName == "status")
+            {
+                string stt = View.GetRowCellDisplayText(e.RowHandle, View.Columns["status"]);
+                if (stt.Equals("Chưa thanh toán"))
+                {
+                    e.Appearance.ForeColor = Color.Red;
+                }
+                else
+                {
+                    e.Appearance.ForeColor = Color.LimeGreen;
+                    e.Appearance.Font = new Font(e.Appearance.Font, FontStyle.Italic);
+                }
+            }
+        }
+        private void FrmHoaDonBanHang_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            gvPhieuXuat.SaveLayoutToXml("data.xml", OptionsLayoutBase.FullLayout);
+        }
         private void gridViewPhieuXuat_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
         {
             if (e.MenuType == DevExpress.XtraGrid.Views.Grid.GridMenuType.Column)
@@ -240,34 +258,153 @@ namespace QuanLyCuaHangBanLeLaptop
                 }
             }
         }
-
-        private void gridViewPhieuXuat_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        private void cboThongKe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboThongKe.SelectedIndex == 0)
+            {
+                lbNV.Enabled = !lbNV.Enabled;
+                lbNgayBD.Enabled = false;
+                lbNgayKT.Enabled = false;
+            }
+            else
+            {
+                lbNV.Enabled = false;
+                lbNgayBD.Enabled = true;
+                lbNgayKT.Enabled = true;
+            }
+        }
+        private void gvPhieuXuat_RowCellStyle(object sender, RowCellStyleEventArgs e)
         {
             GridView View = sender as GridView;
-            //doi mau row chẵn
-            if (e.RowHandle >= 0)
-            {
-                if (e.RowHandle % 2 == 0)
-                {
-                    e.Appearance.BackColor = Color.MintCream;
-                }
-            }
-            //Doi mau cell cua colummn status,
-            //neu co gia tri Actived thi co mau xanh,
-            //neu co gia tri N/A thi co màu đỏ
+            //Doi mau cell cua colummn giá khuyến mãi,
+            //neu có giá khuyến mãi thi co mau xanh,
             if (e.Column.FieldName == "status")
             {
-                string stt = View.GetRowCellDisplayText(e.RowHandle, View.Columns["status"]);
-                if (stt.Equals("Chưa thanh toán"))
+                string trangThai = View.GetRowCellDisplayText(e.RowHandle, View.Columns["status"]);
+                if (trangThai.Equals("Chưa thanh toán"))
                 {
+                    e.Appearance.Font = new Font(e.Appearance.Font, FontStyle.Bold);
                     e.Appearance.ForeColor = Color.Red;
                 }
                 else
                 {
-                    e.Appearance.ForeColor = Color.LimeGreen;
-                    e.Appearance.Font = new Font(e.Appearance.Font, FontStyle.Italic);
-                }
+                    e.Appearance.Font = new Font(e.Appearance.Font, FontStyle.Bold);
+                    e.Appearance.ForeColor = Color.Green;
+                }    
             }
         }
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            bllHoaDonBH = new BLLHoaDonBanHang();
+            if (cboThongKe.SelectedIndex == 0 && !sleNV.Text.Equals("Nhân viên"))
+            {
+                List<DTOPhieuXuatKhachHang> lstPXKH = bllHoaDonBH.lstPhieuXuat_KH_ByMaNV(sleNV.EditValue.ToString());
+                gcPhieuXuat.DataSource = lstPXKH;
+                txtSoLuongKQ.Text = lstPXKH.Count.ToString();
+
+                double tongDoanhThu = 0;
+                //double s = Convert.ToDouble(lstPXKH.Sum(t => t.total));
+                foreach (DTOPhieuXuatKhachHang px in lstPXKH)
+                {
+                    tongDoanhThu += px.total;
+                }
+                txtTongDoanhThu.Text = string.Format("{0:0,0 đ}", tongDoanhThu);
+                return;
+            }
+            if (cboThongKe.SelectedIndex == 1 && deNgayBD.EditValue != null && deNgayKT.EditValue != null)
+            {
+                if(Convert.ToDateTime(deNgayBD.EditValue)> Convert.ToDateTime(deNgayKT.EditValue))
+                {
+                    XtraMessageBox.Show("Ngày thống kê không hợp lệ (Ngày kết thúc > ngày bắt đầu)", "Thông báo [Message]"
+                               , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                List<DTOPhieuXuatKhachHang> lstPXKH = bllHoaDonBH.lstPhieuXuat_KH_BetweenDate(Convert.ToDateTime(deNgayBD.EditValue), Convert.ToDateTime(deNgayKT.EditValue));
+                gcPhieuXuat.DataSource = lstPXKH;
+                txtSoLuongKQ.Text = lstPXKH.Count.ToString();
+                double tongDoanhThu = 0;
+                //double s = Convert.ToDouble(lstPXKH.Sum(t => t.total));
+                foreach (DTOPhieuXuatKhachHang px in lstPXKH)
+                {
+                    tongDoanhThu += px.total;
+                }
+                txtTongDoanhThu.Text = string.Format("{0:0,0 đ}", tongDoanhThu);
+            }    
+        }
+        private void gvPhieuXuat_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            try
+            {
+                BLLNhanVien bllNV = new BLLNhanVien();
+                txtMaHD.Text = gvPhieuXuat.GetRowCellValue(gvPhieuXuat.FocusedRowHandle, gvPhieuXuat.Columns["id"]).ToString();
+
+                string maNV = gvPhieuXuat.GetRowCellValue(gvPhieuXuat.FocusedRowHandle, gvPhieuXuat.Columns["employee_id"]).ToString();
+                string tenNV = bllNV.getAll_NV().Find(t => t.id == maNV).name;
+                txtNhanVIen.Text = maNV + " - " + tenNV;
+                dENgayLapHD.EditValue = Convert.ToDateTime(gvPhieuXuat.GetRowCellValue(gvPhieuXuat.FocusedRowHandle, gvPhieuXuat.Columns["date_"]));
+                txtKH.Text = gvPhieuXuat.GetRowCellValue(gvPhieuXuat.FocusedRowHandle, gvPhieuXuat.Columns["TenKH"]).ToString();
+                txtSDTKH.Text = gvPhieuXuat.GetRowCellValue(gvPhieuXuat.FocusedRowHandle, gvPhieuXuat.Columns["phone"]).ToString();
+                txtDiaChiKH.Text = gvPhieuXuat.GetRowCellValue(gvPhieuXuat.FocusedRowHandle, gvPhieuXuat.Columns["Address_"]).ToString();
+                cboTrangThai.Text = gvPhieuXuat.GetRowCellValue(gvPhieuXuat.FocusedRowHandle, gvPhieuXuat.Columns["status"]).ToString();
+                txtTongTien.Text = gvPhieuXuat.GetRowCellValue(gvPhieuXuat.FocusedRowHandle, gvPhieuXuat.Columns["total"]).ToString();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Error: "+ex.Message, "Thông báo [Message]"
+                               , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+        private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            btnLuu.Enabled = !btnLuu.Enabled;
+            btnHuy.Enabled = !btnHuy.Enabled;
+            btnSua.Enabled = !btnSua.Enabled;
+
+
+        }
+        private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            btnLuu.Enabled = !btnLuu.Enabled;
+            btnHuy.Enabled = !btnHuy.Enabled;
+            btnSua.Enabled = !btnSua.Enabled;
+        }
+        private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            btnLuu.Enabled = !btnLuu.Enabled;
+            btnHuy.Enabled = !btnHuy.Enabled;
+            btnSua.Enabled = !btnSua.Enabled;
+        }
+        private void btnInHoaDon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bllHoaDonBH = new BLLHoaDonBanHang();
+            List<DTOPhieuXuatKhachHang> lst = bllHoaDonBH.getPhieuXuat_KH_NV_SP_ByMaHD(txtMaHD.Text);
+            using (FrmPrint frm = new FrmPrint())
+            {
+                frm.printInvoice(lst);
+                frm.ShowDialog();
+            }
+        }
+        private void txtMaHD_EditValueChanged(object sender, EventArgs e)
+        {
+            btnInHoaDon.Enabled = true;
+        }
+        #endregion
+
+
+        #region Class
+        class MenuInfo
+        {
+            public MenuInfo(GridColumn column, FixedStyle style)
+            {
+                this.Column = column;
+                this.Style = style;
+            }
+            public FixedStyle Style;
+            public GridColumn Column;
+        }
+        #endregion
+
+        
     }
 }

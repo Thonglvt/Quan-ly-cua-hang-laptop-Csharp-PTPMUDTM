@@ -68,6 +68,11 @@ namespace QuanLyCuaHangBanLeLaptop
             lstHoaDon = bllHoaDonBH.lstPhieuXuat_KH();
             gridControlSanPhamKM.DataSource = lstSPKhuyenMai;
         }
+        int soLuongTmp = 1;
+        void getSoLuongFromFromCon(int soLuong)
+        {
+            soLuongTmp = soLuong;
+        }
         #endregion
 
         #region Event
@@ -79,7 +84,6 @@ namespace QuanLyCuaHangBanLeLaptop
             btnCapNhatCTHD.Click += BtnCapNhatCTHD_Click;
             //
             btnHuy.Enabled = false;
-            btnTaoDH.Enabled = false;
             btnLuu.Enabled = false;
 
             colThemSPVaoDH.Visible = false;
@@ -91,23 +95,26 @@ namespace QuanLyCuaHangBanLeLaptop
             var maSP = gridViewCTHD.GetRowCellValue(gridViewCTHD.FocusedRowHandle, gridViewCTHD.Columns["MaSP"]);
             var sl = gridViewCTHD.GetRowCellValue(gridViewCTHD.FocusedRowHandle, gridViewCTHD.Columns["SoLuong"]);
 
-            var find = lstSPKhuyenMai.Find(t => t.MaSP == maSP);
+            var find = lstSPKhuyenMai.Find(t => t.MaSP == maSP.ToString());
             find.SoLuong += Convert.ToInt32(sl);
 
 
             lstSPKhuyenMai_CTHD.RemoveAt(gridViewCTHD.FocusedRowHandle);
+
             gridControlCTDH.RefreshDataSource();
             gridControlSanPhamKM.RefreshDataSource();
         }
+
         private void BtnAddSPVaoDH_Click(object sender, EventArgs e)
         {
             //Kiểm tra số lượng còn hàng (Lưu ý load từ db chứ ko sài thuộc tính List)
             //Because có khách hàng đặt hàng qua web số lượng sp sẽ thay đổi List chưa đc cập nhật
             GridView view = sender as GridView;
             var maSP = gridViewSanPhamKM.GetRowCellValue(gridViewSanPhamKM.FocusedRowHandle, gridViewSanPhamKM.Columns["MaSP"]);
-            int soLuong = 1;
+            var tenSP = gridViewSanPhamKM.GetRowCellValue(gridViewSanPhamKM.FocusedRowHandle, gridViewSanPhamKM.Columns["TenSP"]);
             var Gia = gridViewSanPhamKM.GetRowCellValue(gridViewSanPhamKM.FocusedRowHandle, gridViewSanPhamKM.Columns["GiaSauKhuyenMai"]);
             var prod = lstSPKhuyenMai.Find(t => t.MaSP == maSP.ToString());//Dùng để giảm số lượng sp
+            var soLuong = gridViewSanPhamKM.GetRowCellValue(gridViewSanPhamKM.FocusedRowHandle, gridViewSanPhamKM.Columns["SoLuong"]);
 
             if (maSP != null && Gia != null)
             {
@@ -126,29 +133,31 @@ namespace QuanLyCuaHangBanLeLaptop
                            , MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                FrmDiaLogSoLuong frm = new FrmDiaLogSoLuong(maSP.ToString(), tenSP.ToString(),Convert.ToInt32(soLuong));
+                frm.guiFormCha = new FrmDiaLogSoLuong.GETDATA(getSoLuongFromFromCon);
+                frm.ShowDialog();
                 //Kiểm tra sản phẩm tồn tại chưa: nếu Có (Số lượng + 1)
                 foreach (var item in lstSPKhuyenMai_CTHD)
                 {
                     if (item.MaSP.Equals(maSP.ToString()))
                     {
-                        item.SoLuong += 1;
+                        item.SoLuong += this.soLuongTmp;
                         item.ThanhTien = item.SoLuong * item.GiaBan;
                         gridControlCTDH.RefreshDataSource();
                         //Giảm số lượng sản phẩm
-                        prod.SoLuong = (prod != null) ? prod.SoLuong - 1 : prod.SoLuong;
+                        prod.SoLuong = (prod != null) ? prod.SoLuong - this.soLuongTmp : prod.SoLuong;
                         gridControlSanPhamKM.RefreshDataSource();
                         return;
                     }
                 }
                 DTOSanPhamKhuyenMai sp = new DTOSanPhamKhuyenMai();
                 sp.MaSP = maSP.ToString();
-                sp.SoLuong = soLuong;
+                sp.SoLuong = this.soLuongTmp;
                 sp.GiaBan = Convert.ToInt32(Gia);
                 sp.ThanhTien = sp.GiaBan;
-                prod.SoLuong = (prod != null) ? prod.SoLuong - 1 : prod.SoLuong;
+                prod.SoLuong = (prod != null) ? prod.SoLuong - this.soLuongTmp : prod.SoLuong;
                 //Add giỏ hàng
                 lstSPKhuyenMai_CTHD.Add(sp);
-                lstSPKhuyenMai_CTHD_Tam.Add(sp);
 
                 gridControlCTDH.RefreshDataSource();
                 gridControlSanPhamKM.RefreshDataSource();
@@ -168,7 +177,8 @@ namespace QuanLyCuaHangBanLeLaptop
                 string Gia = View.GetRowCellDisplayText(e.RowHandle, View.Columns["GiaBan"]);
                 if (!giaKM.Equals(Gia))
                 {
-                    e.Appearance.ForeColor = Color.ForestGreen;
+                    e.Appearance.Font = new Font(e.Appearance.Font, FontStyle.Bold);
+                    e.Appearance.ForeColor = Color.Green;
                 }
             }
             if (e.Column.FieldName == "GiaBan")
@@ -177,7 +187,7 @@ namespace QuanLyCuaHangBanLeLaptop
                 string Gia = View.GetRowCellDisplayText(e.RowHandle, View.Columns["GiaBan"]);
                 if (!giaKM.Equals(Gia))
                 {
-                    e.Appearance.Font = new Font(e.Appearance.Font, FontStyle.Strikeout);
+                    e.Appearance.Font = new Font("Tahoma", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))));
                 }
             }
             if (e.Column.FieldName == "SoLuong")
@@ -213,7 +223,6 @@ namespace QuanLyCuaHangBanLeLaptop
         }
         private void searchLookUpEdit1View_RowCellClick(object sender, RowCellClickEventArgs e)
         {
-            btnTaoDH.Enabled = true;
             GridLookUpEdit gr = sender as GridLookUpEdit;
             var diaChiKH = searchLookUpEditKHView.GetRowCellValue(e.RowHandle, searchLookUpEditKHView.Columns["Address"]);
             if (diaChiKH != null)
@@ -251,15 +260,23 @@ namespace QuanLyCuaHangBanLeLaptop
         }
         private void btnTaoDH_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            lbCTDH.Enabled = true;
-            btnHuy.Enabled = true;
-            btnTaoDH.Enabled = false;
-            btnLuu.Enabled = true;
-            colThemSPVaoDH.Visible = true;
+            if(searchLookUpEditKH.Text.Equals("Chọn khách hàng"))
+            {
+                XtraMessageBox.Show("Vui lòng chọn khách hàng bên dưới hoặc tra cứu khách hàng để thêm khách hàng mới.", "Thông báo [Message]"
+                           , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }    
+            lbCTDH.Enabled = !btnHuy.Enabled;
+            btnHuy.Enabled = !btnHuy.Enabled;
+            btnTaoDH.Enabled = !btnTaoDH.Enabled;
+            btnLuu.Enabled = !btnLuu.Enabled;
+            colThemSPVaoDH.Visible = !colThemSPVaoDH.Visible;
+            btnInHoaDon.Enabled = !btnInHoaDon.Enabled;
 
-            this.DonHang.employee_id = DTOSession.MaNhanVien;
+            //this.DonHang.employee_id = DTOSession.MaNhanVien;
+            this.DonHang.employee_id = "30102021NV000003";
             var s = searchLookUpEditKHView.GetRowCellValue(searchLookUpEditKHView.FocusedRowHandle, searchLookUpEditKHView.Columns["id"]);
-            this.DonHang.customer_id = "";
+            this.DonHang.customer_id = searchLookUpEditKH.EditValue.ToString();
             this.DonHang.date_ = DateTime.Now;
             this.DonHang.total = 0;
             this.DonHang.status = 0;
@@ -268,6 +285,12 @@ namespace QuanLyCuaHangBanLeLaptop
         }
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (lstSPKhuyenMai_CTHD.Count == 0)
+            {
+                XtraMessageBox.Show("Không thể xuất hóa đơn vì đơn hàng rỗng.", "Thông báo [Message]"
+                           , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             bllACG = new BLLAutoCodeGeneration();
             this.DonHang.id = bllACG.createIDPhieuXuat();
 
@@ -319,39 +342,55 @@ namespace QuanLyCuaHangBanLeLaptop
             lstHoaDon = bllHoaDonBH.lstPhieuXuat_KH();
             lstSPKhuyenMai = bllSanPham.lstSanPhamKhuyenMai();
             gridControlSanPhamKM.DataSource = lstSPKhuyenMai;
-            //gridControlSanPhamKM.RefreshDataSource();
             XtraMessageBox.Show("Thêm mới thành công đơn hàng có mã #" + this.DonHang.id, "Thông báo [Message]"
                            , MessageBoxButtons.OK, MessageBoxIcon.Information);
-            btnLuu.Enabled = false;
-            colThemSPVaoDH.Visible = false;
+            //Mở report Invoice
+            List<DTOPhieuXuatKhachHang> lstPXKH = new List<DTOPhieuXuatKhachHang>();
+            bllHoaDonBH = new BLLHoaDonBanHang();
+            lstPXKH = bllHoaDonBH.getPhieuXuat_KH_NV_SP_ByMaHD(this.DonHang.id);
+            using (FrmPrint frm = new FrmPrint())
+            {
+                frm.printInvoice(lstPXKH);
+                frm.ShowDialog();
+            }
+            lstSPKhuyenMai_CTHD = new List<DTOSanPhamKhuyenMai>();
+            gridControlCTDH.DataSource = null;
+
+            btnLuu.Enabled = !btnLuu.Enabled;
+            btnHuy.Enabled = !btnHuy.Enabled;
+            btnTaoDH.Enabled = !btnTaoDH.Enabled;
+            colThemSPVaoDH.Visible = !colThemSPVaoDH.Visible;
+            btnInHoaDon.Enabled = !btnInHoaDon.Enabled;
         }
         private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            btnTaoDH.Enabled = true;
-            btnLuu.Enabled = false;
+            btnTaoDH.Enabled = !btnTaoDH.Enabled;
+            btnLuu.Enabled = !btnLuu.Enabled;
             btnHuy.Enabled = !btnHuy.Enabled;
-            colThemSPVaoDH.Visible = false;
+            colThemSPVaoDH.Visible = !colThemSPVaoDH.Visible;
+            btnInHoaDon.Enabled = !btnInHoaDon.Enabled;
 
             lstSPKhuyenMai_CTHD.Clear();
 
             gridControlCTDH.RefreshDataSource();
 
+            searchLookUpEditKH.EditValue = null;
 
             this.lstSPKhuyenMai = bllSanPham.lstSanPhamKhuyenMai();
             gridControlSanPhamKM.DataSource = this.lstSPKhuyenMai;
         }
-
-
-
-
-        #endregion
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string strFind = txtSearch.Text.Trim();
+            if(!BLLHamXuLyChung.CheckPhone(strFind))
+            {
+                XtraMessageBox.Show("Số điện thoại không đúng định dạng.", "Thông báo [Message]"
+                       , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }    
             bllKhachHang = new BLLKhachHang();
             var kh = bllKhachHang.GetCustomers().FirstOrDefault(t => t.id.Equals(strFind) || t.phone.Equals(strFind) || t.cmnd.Equals(strFind) || t.name.Equals(strFind));
-            if(kh!=null)
+            if (kh != null)
             {
                 XtraMessageBox.Show("Khách hàng đã tồn tại.", "Thông báo [Message]"
                        , MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -363,9 +402,24 @@ namespace QuanLyCuaHangBanLeLaptop
             {
                 DialogThemKhachHangMoi dFrm = new DialogThemKhachHangMoi(strFind);
                 dFrm.ShowDialog();
-            } 
-                
+            }
+
 
         }
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+        private void btnInHoaDon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+               
+
+        }
+
+
+        #endregion
+
+
     }
 }
