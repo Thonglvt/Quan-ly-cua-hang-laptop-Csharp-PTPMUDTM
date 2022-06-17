@@ -66,18 +66,18 @@ namespace DAL
 
 
         //Thao tác insert,update,delete
-        public bool insertProduct(Product pProduct)
+        public string insertProduct(Product pProduct)
         {
             db = new QL_LaptopDataContext();
             try
             {
                 db.Products.InsertOnSubmit(pProduct);
                 db.SubmitChanges();
-                return true;
+                return "1";
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return false;
+                return ex.Message;
             }
         }
         public bool updateProduct(Product pProduct)
@@ -127,6 +127,36 @@ namespace DAL
             {
                 return false;
             }
+        }
+
+        public string createIDProducts()
+        {
+            string prodIDLast;
+            try
+            {
+                //Lấy mã cuối cùng
+                prodIDLast = db.Products.OrderByDescending(p => p.id).Select(p => p.id).First().ToString();
+            }
+            catch (Exception)
+            {
+                return "LAP000000";
+            }
+            //Ép thành Int
+            int IDInt = int.Parse(prodIDLast.Substring(3, 6));
+            //Thực hiện tăng dần
+            string ID = "LAP";
+            if (IDInt >= 0 && IDInt < 9)
+                ID += "00000" + (IDInt + 1);
+            else if (IDInt >= 9 && IDInt < 99)
+                ID += "0000" + (IDInt + 1);
+            else if (IDInt >= 99 && IDInt < 999)
+                ID += "000" + (IDInt + 1);
+            else if (IDInt >= 999 && IDInt < 9999)
+                ID += "00" + (IDInt + 1);
+            else if (IDInt >= 9999 && IDInt < 99999)
+                ID += "0" + (IDInt + 1);
+
+            return ID;
         }
     }
 }

@@ -32,8 +32,6 @@
             this.errThongBao = new System.Windows.Forms.ErrorProvider(this.components);
             this.errTBDev = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.checkEditGhiNho = new DevExpress.XtraEditors.CheckEdit();
-            this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.txtPassword = new DevExpress.XtraEditors.TextEdit();
             this.txtUsername = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -44,7 +42,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errTBDev)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEditGhiNho.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
             this.SuspendLayout();
@@ -59,37 +56,15 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.checkEditGhiNho);
-            this.groupControl1.Controls.Add(this.hyperlinkLabelControl1);
             this.groupControl1.Controls.Add(this.txtPassword);
             this.groupControl1.Controls.Add(this.txtUsername);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(12, 101);
+            this.groupControl1.Location = new System.Drawing.Point(17, 75);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(490, 197);
+            this.groupControl1.Size = new System.Drawing.Size(490, 159);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin đăng nhập";
-            // 
-            // checkEditGhiNho
-            // 
-            this.checkEditGhiNho.Location = new System.Drawing.Point(372, 144);
-            this.checkEditGhiNho.Name = "checkEditGhiNho";
-            this.checkEditGhiNho.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.checkEditGhiNho.Properties.Appearance.Options.UseFont = true;
-            this.checkEditGhiNho.Properties.Caption = "Ghi nhớ";
-            this.checkEditGhiNho.Size = new System.Drawing.Size(94, 25);
-            this.checkEditGhiNho.TabIndex = 5;
-            // 
-            // hyperlinkLabelControl1
-            // 
-            this.hyperlinkLabelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.hyperlinkLabelControl1.Appearance.Options.UseFont = true;
-            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(228, 142);
-            this.hyperlinkLabelControl1.Name = "hyperlinkLabelControl1";
-            this.hyperlinkLabelControl1.Size = new System.Drawing.Size(60, 21);
-            this.hyperlinkLabelControl1.TabIndex = 4;
-            this.hyperlinkLabelControl1.Text = "Đăng ký";
             // 
             // txtPassword
             // 
@@ -131,7 +106,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(240, 304);
+            this.btnLogin.Location = new System.Drawing.Point(274, 240);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(111, 37);
             this.btnLogin.TabIndex = 6;
@@ -140,11 +115,12 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(391, 304);
+            this.btnThoat.Location = new System.Drawing.Point(391, 240);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(111, 37);
             this.btnThoat.TabIndex = 7;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // FrmDangNhap
             // 
@@ -154,7 +130,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
             this.BackgroundImageStore = global::QuanLyCuaHangBanLeLaptop.Properties.Resources.background_Login1;
-            this.ClientSize = new System.Drawing.Size(519, 398);
+            this.ClientSize = new System.Drawing.Size(519, 301);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.groupControl1);
@@ -171,7 +147,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEditGhiNho.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -182,8 +157,6 @@
         private System.Windows.Forms.ErrorProvider errThongBao;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider errTBDev;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.CheckEdit checkEditGhiNho;
-        private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl1;
         private DevExpress.XtraEditors.TextEdit txtPassword;
         private DevExpress.XtraEditors.TextEdit txtUsername;
         private DevExpress.XtraEditors.LabelControl labelControl2;

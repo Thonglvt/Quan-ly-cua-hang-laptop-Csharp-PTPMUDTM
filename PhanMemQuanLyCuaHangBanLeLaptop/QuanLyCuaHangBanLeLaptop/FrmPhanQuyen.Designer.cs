@@ -112,6 +112,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.tablePanel1.SetColumn(this.groupControlUserOfNhomND, 0);
             this.groupControlUserOfNhomND.Controls.Add(this.gridControlUserOfNhomQuyen);
             this.groupControlUserOfNhomND.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControlUserOfNhomND.GroupStyle = DevExpress.Utils.GroupStyle.Card;
             this.groupControlUserOfNhomND.Location = new System.Drawing.Point(3, 227);
             this.groupControlUserOfNhomND.Name = "groupControlUserOfNhomND";
             this.tablePanel1.SetRow(this.groupControlUserOfNhomND, 1);
@@ -141,9 +142,12 @@ namespace QuanLyCuaHangBanLeLaptop
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.RowHeight = 30;
             // 
             // colAccount
             // 
+            this.colAccount.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.colAccount.AppearanceCell.Options.UseFont = true;
             this.colAccount.Caption = "Tài khoản [Account]";
             this.colAccount.FieldName = "username";
             this.colAccount.MinWidth = 25;
@@ -156,6 +160,8 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colFullname
             // 
+            this.colFullname.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.colFullname.AppearanceCell.Options.UseFont = true;
             this.colFullname.Caption = "Ho và tên [Full name]";
             this.colFullname.FieldName = "name";
             this.colFullname.MinWidth = 25;
@@ -168,6 +174,8 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colPhone
             // 
+            this.colPhone.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.colPhone.AppearanceCell.Options.UseFont = true;
             this.colPhone.Caption = "Số điện thoại [Phone]";
             this.colPhone.FieldName = "phone";
             this.colPhone.MinWidth = 25;
@@ -263,6 +271,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.tablePanel1.SetColumn(this.groupControlNhomND, 0);
             this.groupControlNhomND.Controls.Add(this.gridControlNhomQuyen);
             this.groupControlNhomND.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControlNhomND.GroupStyle = DevExpress.Utils.GroupStyle.Card;
             this.groupControlNhomND.Location = new System.Drawing.Point(3, 3);
             this.groupControlNhomND.Name = "groupControlNhomND";
             this.groupControlNhomND.Padding = new System.Windows.Forms.Padding(5);
@@ -291,11 +300,12 @@ namespace QuanLyCuaHangBanLeLaptop
             this.gridViewNhomND.GridControl = this.gridControlNhomQuyen;
             this.gridViewNhomND.Name = "gridViewNhomND";
             this.gridViewNhomND.OptionsView.ShowGroupPanel = false;
+            this.gridViewNhomND.RowHeight = 30;
             this.gridViewNhomND.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewNhomND_FocusedRowChanged);
             // 
             // colMaNhom
             // 
-            this.colMaNhom.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.colMaNhom.AppearanceCell.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colMaNhom.AppearanceCell.Options.UseFont = true;
             this.colMaNhom.AppearanceCell.Options.UseTextOptions = true;
             this.colMaNhom.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
@@ -315,7 +325,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colTenNhom
             // 
-            this.colTenNhom.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.colTenNhom.AppearanceCell.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colTenNhom.AppearanceCell.Options.UseFont = true;
             this.colTenNhom.AppearanceCell.Options.UseTextOptions = true;
             this.colTenNhom.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
@@ -335,7 +345,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colGhiChu
             // 
-            this.colGhiChu.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.colGhiChu.AppearanceCell.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colGhiChu.AppearanceCell.Options.UseFont = true;
             this.colGhiChu.AppearanceCell.Options.UseTextOptions = true;
             this.colGhiChu.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
@@ -357,6 +367,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             this.groupControlRights.Controls.Add(this.treeList);
             this.groupControlRights.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControlRights.GroupStyle = DevExpress.Utils.GroupStyle.Card;
             this.groupControlRights.Location = new System.Drawing.Point(0, 0);
             this.groupControlRights.Name = "groupControlRights";
             this.groupControlRights.Padding = new System.Windows.Forms.Padding(5);
@@ -380,13 +391,14 @@ namespace QuanLyCuaHangBanLeLaptop
             this.treeList.ParentFieldName = "ParentMenu";
             this.treeList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
+            this.treeList.RowHeight = 30;
             this.treeList.Size = new System.Drawing.Size(437, 513);
             this.treeList.TabIndex = 0;
             this.treeList.ShownEditor += new System.EventHandler(this.treeList_ShownEditor);
             // 
             // colTenMenu
             // 
-            this.colTenMenu.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold);
+            this.colTenMenu.AppearanceCell.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colTenMenu.AppearanceCell.Options.UseFont = true;
             this.colTenMenu.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.colTenMenu.AppearanceHeader.Options.UseFont = true;
@@ -400,7 +412,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colCoQuyen
             // 
-            this.colCoQuyen.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.colCoQuyen.AppearanceCell.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colCoQuyen.AppearanceCell.Options.UseFont = true;
             this.colCoQuyen.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.colCoQuyen.AppearanceHeader.Options.UseFont = true;
@@ -421,6 +433,8 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colMaMenu
             // 
+            this.colMaMenu.AppearanceCell.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMaMenu.AppearanceCell.Options.UseFont = true;
             this.colMaMenu.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.colMaMenu.AppearanceHeader.Options.UseFont = true;
             this.colMaMenu.AppearanceHeader.Options.UseTextOptions = true;

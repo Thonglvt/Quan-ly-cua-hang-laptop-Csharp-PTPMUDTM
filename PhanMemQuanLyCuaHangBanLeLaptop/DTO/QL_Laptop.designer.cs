@@ -75,9 +75,6 @@ namespace DTO
     partial void InsertTrademark(Trademark instance);
     partial void UpdateTrademark(Trademark instance);
     partial void DeleteTrademark(Trademark instance);
-    partial void InsertProduct(Product instance);
-    partial void UpdateProduct(Product instance);
-    partial void DeleteProduct(Product instance);
     partial void InsertDetail(Detail instance);
     partial void UpdateDetail(Detail instance);
     partial void DeleteDetail(Detail instance);
@@ -93,6 +90,12 @@ namespace DTO
     partial void InserttblPhuongXa(tblPhuongXa instance);
     partial void UpdatetblPhuongXa(tblPhuongXa instance);
     partial void DeletetblPhuongXa(tblPhuongXa instance);
+    partial void InsertProduct(Product instance);
+    partial void UpdateProduct(Product instance);
+    partial void DeleteProduct(Product instance);
+    partial void InsertCategory(Category instance);
+    partial void UpdateCategory(Category instance);
+    partial void DeleteCategory(Category instance);
     #endregion
 		
 		public QL_LaptopDataContext() : 
@@ -245,14 +248,6 @@ namespace DTO
 			}
 		}
 		
-		public System.Data.Linq.Table<Product> Products
-		{
-			get
-			{
-				return this.GetTable<Product>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Detail> Details
 		{
 			get
@@ -290,6 +285,22 @@ namespace DTO
 			get
 			{
 				return this.GetTable<tblPhuongXa>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Product> Products
+		{
+			get
+			{
+				return this.GetTable<Product>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Category> Categories
+		{
+			get
+			{
+				return this.GetTable<Category>();
 			}
 		}
 	}
@@ -2712,236 +2723,6 @@ namespace DTO
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Products")]
-	public partial class Product : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _id;
-		
-		private string _Name;
-		
-		private System.Nullable<int> _quanlity;
-		
-		private System.Nullable<int> _purchase;
-		
-		private System.Nullable<decimal> _price;
-		
-		private System.Nullable<int> _trademark_id;
-		
-		private string _avatar;
-		
-		private System.Nullable<int> _view_;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(string value);
-    partial void OnidChanged();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
-    partial void OnquanlityChanging(System.Nullable<int> value);
-    partial void OnquanlityChanged();
-    partial void OnpurchaseChanging(System.Nullable<int> value);
-    partial void OnpurchaseChanged();
-    partial void OnpriceChanging(System.Nullable<decimal> value);
-    partial void OnpriceChanged();
-    partial void Ontrademark_idChanging(System.Nullable<int> value);
-    partial void Ontrademark_idChanged();
-    partial void OnavatarChanging(string value);
-    partial void OnavatarChanged();
-    partial void Onview_Changing(System.Nullable<int> value);
-    partial void Onview_Changed();
-    #endregion
-		
-		public Product()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Char(9) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(1000)")]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this.OnNameChanging(value);
-					this.SendPropertyChanging();
-					this._Name = value;
-					this.SendPropertyChanged("Name");
-					this.OnNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_quanlity", DbType="Int")]
-		public System.Nullable<int> quanlity
-		{
-			get
-			{
-				return this._quanlity;
-			}
-			set
-			{
-				if ((this._quanlity != value))
-				{
-					this.OnquanlityChanging(value);
-					this.SendPropertyChanging();
-					this._quanlity = value;
-					this.SendPropertyChanged("quanlity");
-					this.OnquanlityChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_purchase", DbType="Int")]
-		public System.Nullable<int> purchase
-		{
-			get
-			{
-				return this._purchase;
-			}
-			set
-			{
-				if ((this._purchase != value))
-				{
-					this.OnpurchaseChanging(value);
-					this.SendPropertyChanging();
-					this._purchase = value;
-					this.SendPropertyChanged("purchase");
-					this.OnpurchaseChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_price", DbType="Decimal(32,0)")]
-		public System.Nullable<decimal> price
-		{
-			get
-			{
-				return this._price;
-			}
-			set
-			{
-				if ((this._price != value))
-				{
-					this.OnpriceChanging(value);
-					this.SendPropertyChanging();
-					this._price = value;
-					this.SendPropertyChanged("price");
-					this.OnpriceChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_trademark_id", DbType="Int")]
-		public System.Nullable<int> trademark_id
-		{
-			get
-			{
-				return this._trademark_id;
-			}
-			set
-			{
-				if ((this._trademark_id != value))
-				{
-					this.Ontrademark_idChanging(value);
-					this.SendPropertyChanging();
-					this._trademark_id = value;
-					this.SendPropertyChanged("trademark_id");
-					this.Ontrademark_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_avatar", DbType="NVarChar(1000)")]
-		public string avatar
-		{
-			get
-			{
-				return this._avatar;
-			}
-			set
-			{
-				if ((this._avatar != value))
-				{
-					this.OnavatarChanging(value);
-					this.SendPropertyChanging();
-					this._avatar = value;
-					this.SendPropertyChanged("avatar");
-					this.OnavatarChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_view_", DbType="Int")]
-		public System.Nullable<int> view_
-		{
-			get
-			{
-				return this._view_;
-			}
-			set
-			{
-				if ((this._view_ != value))
-				{
-					this.Onview_Changing(value);
-					this.SendPropertyChanging();
-					this._view_ = value;
-					this.SendPropertyChanged("view_");
-					this.Onview_Changed();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Detail")]
 	public partial class Detail : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -4115,6 +3896,394 @@ namespace DTO
 					this._TenPhuongXa = value;
 					this.SendPropertyChanged("TenPhuongXa");
 					this.OnTenPhuongXaChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Products")]
+	public partial class Product : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _id;
+		
+		private string _Name;
+		
+		private System.Nullable<int> _quanlity;
+		
+		private System.Nullable<int> _purchase;
+		
+		private System.Nullable<decimal> _price;
+		
+		private System.Nullable<int> _trademark_id;
+		
+		private string _avatar;
+		
+		private System.Nullable<int> _view_;
+		
+		private string _CateID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(string value);
+    partial void OnidChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnquanlityChanging(System.Nullable<int> value);
+    partial void OnquanlityChanged();
+    partial void OnpurchaseChanging(System.Nullable<int> value);
+    partial void OnpurchaseChanged();
+    partial void OnpriceChanging(System.Nullable<decimal> value);
+    partial void OnpriceChanged();
+    partial void Ontrademark_idChanging(System.Nullable<int> value);
+    partial void Ontrademark_idChanged();
+    partial void OnavatarChanging(string value);
+    partial void OnavatarChanged();
+    partial void Onview_Changing(System.Nullable<int> value);
+    partial void Onview_Changed();
+    partial void OnCateIDChanging(string value);
+    partial void OnCateIDChanged();
+    #endregion
+		
+		public Product()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Char(9) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(1000)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_quanlity", DbType="Int")]
+		public System.Nullable<int> quanlity
+		{
+			get
+			{
+				return this._quanlity;
+			}
+			set
+			{
+				if ((this._quanlity != value))
+				{
+					this.OnquanlityChanging(value);
+					this.SendPropertyChanging();
+					this._quanlity = value;
+					this.SendPropertyChanged("quanlity");
+					this.OnquanlityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_purchase", DbType="Int")]
+		public System.Nullable<int> purchase
+		{
+			get
+			{
+				return this._purchase;
+			}
+			set
+			{
+				if ((this._purchase != value))
+				{
+					this.OnpurchaseChanging(value);
+					this.SendPropertyChanging();
+					this._purchase = value;
+					this.SendPropertyChanged("purchase");
+					this.OnpurchaseChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_price", DbType="Decimal(32,0)")]
+		public System.Nullable<decimal> price
+		{
+			get
+			{
+				return this._price;
+			}
+			set
+			{
+				if ((this._price != value))
+				{
+					this.OnpriceChanging(value);
+					this.SendPropertyChanging();
+					this._price = value;
+					this.SendPropertyChanged("price");
+					this.OnpriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_trademark_id", DbType="Int")]
+		public System.Nullable<int> trademark_id
+		{
+			get
+			{
+				return this._trademark_id;
+			}
+			set
+			{
+				if ((this._trademark_id != value))
+				{
+					this.Ontrademark_idChanging(value);
+					this.SendPropertyChanging();
+					this._trademark_id = value;
+					this.SendPropertyChanged("trademark_id");
+					this.Ontrademark_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_avatar", DbType="NVarChar(1000)")]
+		public string avatar
+		{
+			get
+			{
+				return this._avatar;
+			}
+			set
+			{
+				if ((this._avatar != value))
+				{
+					this.OnavatarChanging(value);
+					this.SendPropertyChanging();
+					this._avatar = value;
+					this.SendPropertyChanged("avatar");
+					this.OnavatarChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_view_", DbType="Int")]
+		public System.Nullable<int> view_
+		{
+			get
+			{
+				return this._view_;
+			}
+			set
+			{
+				if ((this._view_ != value))
+				{
+					this.Onview_Changing(value);
+					this.SendPropertyChanging();
+					this._view_ = value;
+					this.SendPropertyChanged("view_");
+					this.Onview_Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CateID", DbType="VarChar(10)")]
+		public string CateID
+		{
+			get
+			{
+				return this._CateID;
+			}
+			set
+			{
+				if ((this._CateID != value))
+				{
+					this.OnCateIDChanging(value);
+					this.SendPropertyChanging();
+					this._CateID = value;
+					this.SendPropertyChanged("CateID");
+					this.OnCateIDChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Category")]
+	public partial class Category : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _CateID;
+		
+		private string _CateName;
+		
+		private string _Note;
+		
+		private string _Images;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnCateIDChanging(string value);
+    partial void OnCateIDChanged();
+    partial void OnCateNameChanging(string value);
+    partial void OnCateNameChanged();
+    partial void OnNoteChanging(string value);
+    partial void OnNoteChanged();
+    partial void OnImagesChanging(string value);
+    partial void OnImagesChanged();
+    #endregion
+		
+		public Category()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CateID", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string CateID
+		{
+			get
+			{
+				return this._CateID;
+			}
+			set
+			{
+				if ((this._CateID != value))
+				{
+					this.OnCateIDChanging(value);
+					this.SendPropertyChanging();
+					this._CateID = value;
+					this.SendPropertyChanged("CateID");
+					this.OnCateIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CateName", DbType="NVarChar(1000)")]
+		public string CateName
+		{
+			get
+			{
+				return this._CateName;
+			}
+			set
+			{
+				if ((this._CateName != value))
+				{
+					this.OnCateNameChanging(value);
+					this.SendPropertyChanging();
+					this._CateName = value;
+					this.SendPropertyChanged("CateName");
+					this.OnCateNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="NVarChar(1000)")]
+		public string Note
+		{
+			get
+			{
+				return this._Note;
+			}
+			set
+			{
+				if ((this._Note != value))
+				{
+					this.OnNoteChanging(value);
+					this.SendPropertyChanging();
+					this._Note = value;
+					this.SendPropertyChanged("Note");
+					this.OnNoteChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Images", DbType="NVarChar(1000)")]
+		public string Images
+		{
+			get
+			{
+				return this._Images;
+			}
+			set
+			{
+				if ((this._Images != value))
+				{
+					this.OnImagesChanging(value);
+					this.SendPropertyChanging();
+					this._Images = value;
+					this.SendPropertyChanged("Images");
+					this.OnImagesChanged();
 				}
 			}
 		}

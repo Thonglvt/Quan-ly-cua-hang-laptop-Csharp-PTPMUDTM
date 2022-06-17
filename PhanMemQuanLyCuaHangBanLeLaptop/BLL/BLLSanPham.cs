@@ -28,30 +28,26 @@ namespace BLL
             return dalSanPham.getSoLuongSPByMaSP(pMaSP);
         }
 
-        public bool insertProduct(string pMaSP, string pTenSP, int pSoLuong, decimal pGia, int pThuongHieu)
+        public string insertProduct(Product pProduct)
         {
             dalSanPham = new DALSanPham();
-            Product p = new Product();
-            p.id = pMaSP;
-            p.Name = pTenSP;
-            p.quanlity = pSoLuong;
-            p.trademark_id = pThuongHieu;
-            p.price = pGia;
-            p.purchase = 0;
-            p.avatar = "";
-            p.view_ = 0;
-            
-            return dalSanPham.insertProduct(p);
+            return dalSanPham.insertProduct(pProduct);
         }
         public bool updateNameTrademarkProduct(string pMaSP, string pTenSP, int pThuongHieu)
         {
             dalSanPham = new DALSanPham();
             bool kq = true;
-            if(pMaSP != string.Empty && pTenSP != string.Empty && pThuongHieu>=0)
+            if (pMaSP != string.Empty && pTenSP != string.Empty && pThuongHieu >= 0)
             {
                 kq = dalSanPham.updateNameTrademartProduct(pMaSP, pTenSP, pThuongHieu);
             }
             return kq;
+        }
+
+        public string createIDProducts()
+        {
+            dalSanPham = new DALSanPham();
+            return dalSanPham.createIDProducts();
         }
     }
 }

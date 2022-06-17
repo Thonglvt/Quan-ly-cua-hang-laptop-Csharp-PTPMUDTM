@@ -154,6 +154,8 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             this.txtSoNha.Location = new System.Drawing.Point(180, 262);
             this.txtSoNha.Name = "txtSoNha";
+            this.txtSoNha.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.txtSoNha.Properties.Appearance.Options.UseFont = true;
             this.txtSoNha.Size = new System.Drawing.Size(947, 68);
             this.txtSoNha.StyleController = this.lcMain;
             this.txtSoNha.TabIndex = 14;

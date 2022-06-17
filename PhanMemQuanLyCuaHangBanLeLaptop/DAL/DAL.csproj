@@ -44,9 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DALAutoCodeGeneration.cs" />
+    <Compile Include="DALChiTietSanPham.cs" />
     <Compile Include="DALHoaDonBanHang.cs" />
     <Compile Include="DALKhachHang.cs" />
     <Compile Include="DALKhuyenMai.cs" />
+    <Compile Include="DALLoaiSanPham.cs" />
     <Compile Include="DALMenu.cs" />
     <Compile Include="DALNhanVien.cs" />
     <Compile Include="DALNhomNguoiDung.cs" />

@@ -360,20 +360,24 @@ namespace QuanLyCuaHangBanLeLaptop
             btnLuu.Enabled = !btnLuu.Enabled;
             btnHuy.Enabled = !btnHuy.Enabled;
             btnSua.Enabled = !btnSua.Enabled;
-
-
+            lbTrangThai.Enabled = !lbTrangThai.Enabled;
+            lbDCGH.Enabled = !lbDCGH.Enabled;
         }
         private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             btnLuu.Enabled = !btnLuu.Enabled;
             btnHuy.Enabled = !btnHuy.Enabled;
             btnSua.Enabled = !btnSua.Enabled;
+            lbTrangThai.Enabled = !lbTrangThai.Enabled;
+            lbDCGH.Enabled = !lbDCGH.Enabled;
         }
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             btnLuu.Enabled = !btnLuu.Enabled;
             btnHuy.Enabled = !btnHuy.Enabled;
             btnSua.Enabled = !btnSua.Enabled;
+            lbTrangThai.Enabled = !lbTrangThai.Enabled;
+            lbDCGH.Enabled = !lbDCGH.Enabled;
         }
         private void btnInHoaDon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

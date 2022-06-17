@@ -92,5 +92,13 @@ namespace QuanLyCuaHangBanLeLaptop
                 XtraMessageBox.Show("Tài khoản hoặc mật khẩu không chính xác", "Thông báo [Message]", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            if (XtraMessageBox.Show("Xác nhận thoát?", "Thông báo [Message]", MessageBoxButtons.YesNo, MessageBoxIcon.None) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

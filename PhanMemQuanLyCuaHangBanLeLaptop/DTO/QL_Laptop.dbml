@@ -137,18 +137,6 @@
       <Column Name="name" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Products" Member="Products">
-    <Type Name="Product">
-      <Column Name="id" Type="System.String" DbType="Char(9) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
-      <Column Name="quanlity" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="purchase" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="price" Type="System.Decimal" DbType="Decimal(32,0)" CanBeNull="true" />
-      <Column Name="trademark_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="avatar" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
-      <Column Name="view_" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.Detail" Member="Details">
     <Type Name="Detail">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -209,6 +197,27 @@
       <Column Name="MaPhuongXa" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MaQuanHuyen" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="TenPhuongXa" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Products" Member="Products">
+    <Type Name="Product">
+      <Column Name="id" Type="System.String" DbType="Char(9) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="quanlity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="purchase" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(32,0)" CanBeNull="true" />
+      <Column Name="trademark_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="avatar" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="view_" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CateID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Category" Member="Categories">
+    <Type Name="Category">
+      <Column Name="CateID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CateName" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Images" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

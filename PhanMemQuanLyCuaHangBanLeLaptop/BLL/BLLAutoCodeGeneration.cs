@@ -21,5 +21,10 @@ namespace BLL
             dalACG = new DALAutoCodeGeneration();
             return dalACG.createIDKH();
         }
+        public string createIDProducts()
+        {
+            dalACG = new DALAutoCodeGeneration();
+            return dalACG.createIDProducts();
+        }
     }
 }

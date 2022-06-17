@@ -66,7 +66,6 @@ namespace QuanLyCuaHangBanLeLaptop
             this.btnTaoDH = new DevExpress.XtraBars.BarButtonItem();
             this.btnLuu = new DevExpress.XtraBars.BarButtonItem();
             this.btnHuy = new DevExpress.XtraBars.BarButtonItem();
-            this.btnInHoaDon = new DevExpress.XtraBars.BarButtonItem();
             this.btnHuongDan = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -626,7 +625,6 @@ namespace QuanLyCuaHangBanLeLaptop
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnTaoDH,
             this.btnLuu,
-            this.btnInHoaDon,
             this.btnHuy,
             this.btnHuongDan});
             this.barManager1.MainMenu = this.bar2;
@@ -641,9 +639,8 @@ namespace QuanLyCuaHangBanLeLaptop
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnTaoDH, true),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnLuu, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHuy, true),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnInHoaDon, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnLuu),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHuongDan)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
@@ -663,10 +660,10 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // btnLuu
             // 
-            this.btnLuu.Caption = "Lưu";
+            this.btnLuu.Caption = "Xuất hóa đơn";
             this.btnLuu.Id = 1;
-            this.btnLuu.ImageOptions.Image = global::QuanLyCuaHangBanLeLaptop.Properties.Resources.saveto_16x161;
-            this.btnLuu.ImageOptions.LargeImage = global::QuanLyCuaHangBanLeLaptop.Properties.Resources.saveto_32x323;
+            this.btnLuu.ImageOptions.Image = global::QuanLyCuaHangBanLeLaptop.Properties.Resources.printer_16x161;
+            this.btnLuu.ImageOptions.LargeImage = global::QuanLyCuaHangBanLeLaptop.Properties.Resources.printer_32x321;
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnLuu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLuu_ItemClick);
@@ -680,17 +677,6 @@ namespace QuanLyCuaHangBanLeLaptop
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnHuy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHuy_ItemClick);
-            // 
-            // btnInHoaDon
-            // 
-            this.btnInHoaDon.Caption = "Xuất hóa đơn";
-            this.btnInHoaDon.Enabled = false;
-            this.btnInHoaDon.Id = 2;
-            this.btnInHoaDon.ImageOptions.Image = global::QuanLyCuaHangBanLeLaptop.Properties.Resources.printer_16x16;
-            this.btnInHoaDon.ImageOptions.LargeImage = global::QuanLyCuaHangBanLeLaptop.Properties.Resources.printer_32x32;
-            this.btnInHoaDon.Name = "btnInHoaDon";
-            this.btnInHoaDon.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.btnInHoaDon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnInHoaDon_ItemClick);
             // 
             // btnHuongDan
             // 
@@ -772,6 +758,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // layoutControlGroupDMSP
             // 
+            this.layoutControlGroupDMSP.GroupStyle = DevExpress.Utils.GroupStyle.Card;
             this.layoutControlGroupDMSP.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem2,
             this.lbCTDH});
@@ -1009,7 +996,6 @@ namespace QuanLyCuaHangBanLeLaptop
         private DevExpress.XtraBars.BarButtonItem btnTaoDH;
         private DevExpress.XtraBars.BarButtonItem btnLuu;
         private DevExpress.XtraBars.BarButtonItem btnHuy;
-        private DevExpress.XtraBars.BarButtonItem btnInHoaDon;
         private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;

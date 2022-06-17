@@ -35,3 +35,4 @@ E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLa
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\BLL\obj\Debug\BLL.csproj.CopyComplete
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\BLL\obj\Debug\BLL.dll
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\BLL\obj\Debug\BLL.pdb
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache

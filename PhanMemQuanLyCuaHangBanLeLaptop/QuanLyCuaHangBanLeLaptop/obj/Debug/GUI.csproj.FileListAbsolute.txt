@@ -255,7 +255,6 @@ E:\PTPM&UDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\bin\Debug\
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\bin\Debug\QuanLyCuaHangBanLeLaptop.exe.config
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\bin\Debug\QuanLyCuaHangBanLeLaptop.exe
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\bin\Debug\QuanLyCuaHangBanLeLaptop.pdb
-E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\bin\Debug\BLL.dll
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\bin\Debug\Dapper.dll
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\bin\Debug\DevExpress.BonusSkins.v19.2.dll
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\bin\Debug\DevExpress.Charts.v19.2.Core.dll
@@ -509,3 +508,4 @@ E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLa
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\obj\Debug\QuanLyCuaHangBanLeLaptop.pdb
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\obj\Debug\QuanLyCuaHangBanLeLaptop.FrmDiaLogSoLuong.resources
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\obj\Debug\QuanLyCuaHangBanLeLaptop.FrmPrint.resources
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\bin\Debug\BLL.dll

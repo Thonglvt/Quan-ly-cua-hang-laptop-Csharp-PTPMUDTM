@@ -525,6 +525,14 @@
     <None Include="Resources\edittask_16x16.png" />
     <None Include="Resources\saveall_32x322.png" />
     <None Include="Resources\saveall_16x161.png" />
+    <None Include="Resources\printer_32x321.png" />
+    <None Include="Resources\printer_16x161.png" />
+    <None Include="Resources\del6.svg" />
+    <None Include="Resources\deletelist2_32x32.png" />
+    <None Include="Resources\deletelist2_16x16.png" />
+    <None Include="Resources\setdetaillevel.svg" />
+    <None Include="Resources\initialstate_32x32.png" />
+    <None Include="Resources\chartyaxissettings_32x32.png" />
     <Content Include="Resources\success2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

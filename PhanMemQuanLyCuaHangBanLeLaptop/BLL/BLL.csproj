@@ -67,9 +67,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLLAutoCodeGeneration.cs" />
+    <Compile Include="BLLChiTIetSanPham.cs" />
     <Compile Include="BLLHoaDonBanHang.cs" />
     <Compile Include="BLLKhachHang.cs" />
     <Compile Include="BLLKhuyenMai.cs" />
+    <Compile Include="BLLLoaiSanPham.cs" />
     <Compile Include="BLLNhanVien.cs" />
     <Compile Include="BLLNhomNguoiDung.cs" />
     <Compile Include="BLLPhuongXa.cs" />

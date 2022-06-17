@@ -73,6 +73,14 @@ namespace QuanLyCuaHangBanLeLaptop
         {
             soLuongTmp = soLuong;
         }
+        void dongMoThaoTac()
+        {
+            lbCTDH.Enabled = !btnHuy.Enabled;
+            btnHuy.Enabled = !btnHuy.Enabled;
+            btnTaoDH.Enabled = !btnTaoDH.Enabled;
+            btnLuu.Enabled = !btnLuu.Enabled;
+            colThemSPVaoDH.Visible = !colThemSPVaoDH.Visible;
+        }
         #endregion
 
         #region Event
@@ -265,14 +273,13 @@ namespace QuanLyCuaHangBanLeLaptop
                 XtraMessageBox.Show("Vui lòng chọn khách hàng bên dưới hoặc tra cứu khách hàng để thêm khách hàng mới.", "Thông báo [Message]"
                            , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }    
-            lbCTDH.Enabled = !btnHuy.Enabled;
-            btnHuy.Enabled = !btnHuy.Enabled;
-            btnTaoDH.Enabled = !btnTaoDH.Enabled;
-            btnLuu.Enabled = !btnLuu.Enabled;
-            colThemSPVaoDH.Visible = !colThemSPVaoDH.Visible;
-            btnInHoaDon.Enabled = !btnInHoaDon.Enabled;
-
+            }
+            //lbCTDH.Enabled = !btnHuy.Enabled;
+            //btnHuy.Enabled = !btnHuy.Enabled;
+            //btnTaoDH.Enabled = !btnTaoDH.Enabled;
+            //btnLuu.Enabled = !btnLuu.Enabled;
+            //colThemSPVaoDH.Visible = !colThemSPVaoDH.Visible;
+            dongMoThaoTac();
             //this.DonHang.employee_id = DTOSession.MaNhanVien;
             this.DonHang.employee_id = "30102021NV000003";
             var s = searchLookUpEditKHView.GetRowCellValue(searchLookUpEditKHView.FocusedRowHandle, searchLookUpEditKHView.Columns["id"]);
@@ -291,84 +298,88 @@ namespace QuanLyCuaHangBanLeLaptop
                            , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            bllACG = new BLLAutoCodeGeneration();
-            this.DonHang.id = bllACG.createIDPhieuXuat();
+            if (XtraMessageBox.Show("Xác nhận thanh toán?", "Thông báo [Message]", MessageBoxButtons.YesNo, MessageBoxIcon.None) == DialogResult.Yes)
+            {
+                bllACG = new BLLAutoCodeGeneration();
+                this.DonHang.id = bllACG.createIDPhieuXuat();
 
-            //B1: Kiểm tra số lượng tồn
-            foreach (var item in lstSPKhuyenMai_CTHD)
-            {
-                int soLuongTon = bllSanPham.getSoLuongSPByMaSP(item.MaSP);
-                if (soLuongTon == -1)
+                //B1: Kiểm tra số lượng tồn
+                foreach (var item in lstSPKhuyenMai_CTHD)
                 {
-                    XtraMessageBox.Show("Sản phẩm này tạm ngưng bán.", "Thông báo [Message]"
-                       , MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                if (item.SoLuong > soLuongTon)
-                {
-                    XtraMessageBox.Show("Sản phẩm: #" + item.MaSP + " không đủ số lượng để đáp ứng.", "Thông báo [Message]"
-                       , MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                    int soLuongTon = bllSanPham.getSoLuongSPByMaSP(item.MaSP);
+                    if (soLuongTon == -1)
+                    {
+                        XtraMessageBox.Show("Sản phẩm này tạm ngưng bán.", "Thông báo [Message]"
+                           , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    if (item.SoLuong > soLuongTon)
+                    {
+                        XtraMessageBox.Show("Sản phẩm: #" + item.MaSP + " không đủ số lượng để đáp ứng.", "Thông báo [Message]"
+                           , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
 
-            }
-            //B2:Thêm phiếu xuất
-            string kqInsertHD = bllHoaDonBH.insertPhieuXuat(this.DonHang);
-            if (!kqInsertHD.Equals("1"))
-            {
-                XtraMessageBox.Show(kqInsertHD, "Thông báo [Message]"
-                       , MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            //B3: Add chi tiết phiếu xuất
-            foreach (var item in lstSPKhuyenMai_CTHD)
-            {
-                ChiTietPhieuXuat chiTietDH = new ChiTietPhieuXuat();
-                chiTietDH.phieuXuat_id = this.DonHang.id;
-                chiTietDH.product_id = item.MaSP;
-                chiTietDH.quanlity = item.SoLuong;
-                chiTietDH.price = item.GiaBan;
-                kqInsertHD = bllHoaDonBH.insertChiTietPhieuXuat(chiTietDH);
+                }
+                //B2:Thêm phiếu xuất
+                string kqInsertHD = bllHoaDonBH.insertPhieuXuat(this.DonHang);
                 if (!kqInsertHD.Equals("1"))
                 {
                     XtraMessageBox.Show(kqInsertHD, "Thông báo [Message]"
                            , MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-            }
-            acThongBao.Show(this, "Thông báo", "Thêm đơn hàng thành công."
-                       , "", Properties.Resources.success2___Copy, new Message());
+                //B3: Add chi tiết phiếu xuất
+                foreach (var item in lstSPKhuyenMai_CTHD)
+                {
+                    ChiTietPhieuXuat chiTietDH = new ChiTietPhieuXuat();
+                    chiTietDH.phieuXuat_id = this.DonHang.id;
+                    chiTietDH.product_id = item.MaSP;
+                    chiTietDH.quanlity = item.SoLuong;
+                    chiTietDH.price = item.GiaBan;
+                    kqInsertHD = bllHoaDonBH.insertChiTietPhieuXuat(chiTietDH);
+                    if (!kqInsertHD.Equals("1"))
+                    {
+                        XtraMessageBox.Show(kqInsertHD, "Thông báo [Message]"
+                               , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                acThongBao.Show(this, "Thông báo", "Thêm đơn hàng thành công."
+                           , "", Properties.Resources.success2___Copy, new Message());
 
-            lstHoaDon = bllHoaDonBH.lstPhieuXuat_KH();
-            lstSPKhuyenMai = bllSanPham.lstSanPhamKhuyenMai();
-            gridControlSanPhamKM.DataSource = lstSPKhuyenMai;
-            XtraMessageBox.Show("Thêm mới thành công đơn hàng có mã #" + this.DonHang.id, "Thông báo [Message]"
-                           , MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //Mở report Invoice
-            List<DTOPhieuXuatKhachHang> lstPXKH = new List<DTOPhieuXuatKhachHang>();
-            bllHoaDonBH = new BLLHoaDonBanHang();
-            lstPXKH = bllHoaDonBH.getPhieuXuat_KH_NV_SP_ByMaHD(this.DonHang.id);
-            using (FrmPrint frm = new FrmPrint())
-            {
-                frm.printInvoice(lstPXKH);
-                frm.ShowDialog();
-            }
-            lstSPKhuyenMai_CTHD = new List<DTOSanPhamKhuyenMai>();
-            gridControlCTDH.DataSource = null;
+                lstHoaDon = bllHoaDonBH.lstPhieuXuat_KH();
+                lstSPKhuyenMai = bllSanPham.lstSanPhamKhuyenMai();
+                gridControlSanPhamKM.DataSource = lstSPKhuyenMai;
+                XtraMessageBox.Show("Thêm mới thành công đơn hàng có mã #" + this.DonHang.id, "Thông báo [Message]"
+                               , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Mở report Invoice
+                List<DTOPhieuXuatKhachHang> lstPXKH = new List<DTOPhieuXuatKhachHang>();
+                bllHoaDonBH = new BLLHoaDonBanHang();
+                lstPXKH = bllHoaDonBH.getPhieuXuat_KH_NV_SP_ByMaHD(this.DonHang.id);
+                using (FrmPrint frm = new FrmPrint())
+                {
+                    frm.printInvoice(lstPXKH);
+                    frm.ShowDialog();
+                }
+                lstSPKhuyenMai_CTHD = new List<DTOSanPhamKhuyenMai>();
+                gridControlCTDH.DataSource = null;
 
-            btnLuu.Enabled = !btnLuu.Enabled;
-            btnHuy.Enabled = !btnHuy.Enabled;
-            btnTaoDH.Enabled = !btnTaoDH.Enabled;
-            colThemSPVaoDH.Visible = !colThemSPVaoDH.Visible;
-            btnInHoaDon.Enabled = !btnInHoaDon.Enabled;
+                //btnLuu.Enabled = !btnLuu.Enabled;
+                //btnHuy.Enabled = !btnHuy.Enabled;
+                //btnTaoDH.Enabled = !btnTaoDH.Enabled;
+                //colThemSPVaoDH.Visible = !colThemSPVaoDH.Visible;
+                dongMoThaoTac();
+            }
+
         }
         private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            btnTaoDH.Enabled = !btnTaoDH.Enabled;
-            btnLuu.Enabled = !btnLuu.Enabled;
-            btnHuy.Enabled = !btnHuy.Enabled;
-            colThemSPVaoDH.Visible = !colThemSPVaoDH.Visible;
-            btnInHoaDon.Enabled = !btnInHoaDon.Enabled;
+            //btnTaoDH.Enabled = !btnTaoDH.Enabled;
+            //btnLuu.Enabled = !btnLuu.Enabled;
+            //btnHuy.Enabled = !btnHuy.Enabled;
+            //colThemSPVaoDH.Visible = !colThemSPVaoDH.Visible;
+            dongMoThaoTac();
 
             lstSPKhuyenMai_CTHD.Clear();
 
@@ -410,11 +421,6 @@ namespace QuanLyCuaHangBanLeLaptop
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
-        }
-        private void btnInHoaDon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-               
-
         }
 
 

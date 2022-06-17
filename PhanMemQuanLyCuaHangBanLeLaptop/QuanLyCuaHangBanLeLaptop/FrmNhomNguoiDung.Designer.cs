@@ -146,12 +146,13 @@ namespace QuanLyCuaHangBanLeLaptop
             this.gridViewNhomQuyen.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
             this.gridViewNhomQuyen.OptionsNavigation.AutoFocusNewRow = true;
             this.gridViewNhomQuyen.OptionsView.ShowGroupPanel = false;
+            this.gridViewNhomQuyen.RowHeight = 30;
             this.gridViewNhomQuyen.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView_FocusedRowChanged);
             this.gridViewNhomQuyen.FocusedRowLoaded += new DevExpress.XtraGrid.Views.Base.RowEventHandler(this.gridViewNhomQuyen_FocusedRowLoaded);
             // 
             // colMaNhom
             // 
-            this.colMaNhom.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.colMaNhom.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colMaNhom.AppearanceCell.Options.UseFont = true;
             this.colMaNhom.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colMaNhom.AppearanceHeader.Options.UseFont = true;
@@ -166,7 +167,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colTenNhom
             // 
-            this.colTenNhom.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.colTenNhom.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colTenNhom.AppearanceCell.Options.UseFont = true;
             this.colTenNhom.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colTenNhom.AppearanceHeader.Options.UseFont = true;
@@ -180,7 +181,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colGhiChu
             // 
-            this.colGhiChu.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.colGhiChu.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colGhiChu.AppearanceCell.Options.UseFont = true;
             this.colGhiChu.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colGhiChu.AppearanceHeader.Options.UseFont = true;
@@ -201,7 +202,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(143, 372, 812, 500);
             this.dataLayoutControl1.Root = this.Root;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(1314, 612);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(1497, 612);
             this.dataLayoutControl1.TabIndex = 1;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
@@ -213,7 +214,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.layoutControlRight);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1290, 588);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1473, 588);
             this.splitContainerControl1.SplitterPosition = 620;
             this.splitContainerControl1.TabIndex = 4;
             // 
@@ -335,7 +336,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(5, 5);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1314, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1497, 30);
             // 
             // barDockControlBottom
             // 
@@ -343,7 +344,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(5, 647);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1314, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1497, 0);
             // 
             // barDockControlLeft
             // 
@@ -357,7 +358,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1319, 35);
+            this.barDockControlRight.Location = new System.Drawing.Point(1502, 35);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 612);
             // 
@@ -476,13 +477,13 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlRight.Name = "layoutControlRight";
             this.layoutControlRight.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1108, 343, 812, 500);
             this.layoutControlRight.Root = this.layoutControlGroup2;
-            this.layoutControlRight.Size = new System.Drawing.Size(658, 588);
+            this.layoutControlRight.Size = new System.Drawing.Size(841, 588);
             this.layoutControlRight.TabIndex = 0;
             this.layoutControlRight.Text = "layoutControl1";
             // 
             // lookUpEditNhomND
             // 
-            this.lookUpEditNhomND.Location = new System.Drawing.Point(565, 50);
+            this.lookUpEditNhomND.Location = new System.Drawing.Point(688, 50);
             this.lookUpEditNhomND.MenuManager = this.barManager1;
             this.lookUpEditNhomND.Name = "lookUpEditNhomND";
             this.lookUpEditNhomND.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -490,16 +491,16 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lookUpEditNhomND.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MaNhom", "Mã nhóm"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenNhom", "Tên nhóm")});
-            this.lookUpEditNhomND.Size = new System.Drawing.Size(69, 22);
+            this.lookUpEditNhomND.Size = new System.Drawing.Size(129, 22);
             this.lookUpEditNhomND.StyleController = this.layoutControlRight;
             this.lookUpEditNhomND.TabIndex = 10;
             this.lookUpEditNhomND.EditValueChanged += new System.EventHandler(this.lookUpEditNhomND_EditValueChanged);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(392, 50);
+            this.btnAdd.Location = new System.Drawing.Point(498, 50);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(30, 27);
+            this.btnAdd.Size = new System.Drawing.Size(47, 27);
             this.btnAdd.StyleController = this.layoutControlRight;
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = ">>";
@@ -507,11 +508,11 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // gridControlDSNDThuocMaNhomND
             // 
-            this.gridControlDSNDThuocMaNhomND.Location = new System.Drawing.Point(450, 76);
+            this.gridControlDSNDThuocMaNhomND.Location = new System.Drawing.Point(573, 76);
             this.gridControlDSNDThuocMaNhomND.MainView = this.gridViewUserThuocNhomND;
             this.gridControlDSNDThuocMaNhomND.MenuManager = this.barManager1;
             this.gridControlDSNDThuocMaNhomND.Name = "gridControlDSNDThuocMaNhomND";
-            this.gridControlDSNDThuocMaNhomND.Size = new System.Drawing.Size(184, 488);
+            this.gridControlDSNDThuocMaNhomND.Size = new System.Drawing.Size(244, 488);
             this.gridControlDSNDThuocMaNhomND.TabIndex = 5;
             this.gridControlDSNDThuocMaNhomND.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewUserThuocNhomND});
@@ -523,10 +524,11 @@ namespace QuanLyCuaHangBanLeLaptop
             this.gridViewUserThuocNhomND.GridControl = this.gridControlDSNDThuocMaNhomND;
             this.gridViewUserThuocNhomND.Name = "gridViewUserThuocNhomND";
             this.gridViewUserThuocNhomND.OptionsView.ShowGroupPanel = false;
+            this.gridViewUserThuocNhomND.RowHeight = 30;
             // 
             // colUserT
             // 
-            this.colUserT.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.colUserT.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colUserT.AppearanceCell.Options.UseFont = true;
             this.colUserT.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colUserT.AppearanceHeader.Options.UseFont = true;
@@ -548,7 +550,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.gridControlDSNguoiDung.MainView = this.gridViewNguoiDung;
             this.gridControlDSNguoiDung.MenuManager = this.barManager1;
             this.gridControlDSNguoiDung.Name = "gridControlDSNguoiDung";
-            this.gridControlDSNguoiDung.Size = new System.Drawing.Size(340, 514);
+            this.gridControlDSNguoiDung.Size = new System.Drawing.Size(446, 514);
             this.gridControlDSNguoiDung.TabIndex = 4;
             this.gridControlDSNguoiDung.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewNguoiDung});
@@ -562,10 +564,11 @@ namespace QuanLyCuaHangBanLeLaptop
             this.gridViewNguoiDung.GridControl = this.gridControlDSNguoiDung;
             this.gridViewNguoiDung.Name = "gridViewNguoiDung";
             this.gridViewNguoiDung.OptionsView.ShowGroupPanel = false;
+            this.gridViewNguoiDung.RowHeight = 30;
             // 
             // colUser
             // 
-            this.colUser.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.colUser.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colUser.AppearanceCell.Options.UseFont = true;
             this.colUser.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colUser.AppearanceHeader.Options.UseFont = true;
@@ -581,7 +584,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colFullname
             // 
-            this.colFullname.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.colFullname.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colFullname.AppearanceCell.Options.UseFont = true;
             this.colFullname.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colFullname.AppearanceHeader.Options.UseFont = true;
@@ -597,7 +600,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colPhone
             // 
-            this.colPhone.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.colPhone.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colPhone.AppearanceCell.Options.UseFont = true;
             this.colPhone.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colPhone.AppearanceHeader.Options.UseFont = true;
@@ -613,9 +616,9 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(392, 81);
+            this.btnRemove.Location = new System.Drawing.Point(498, 81);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(30, 27);
+            this.btnRemove.Size = new System.Drawing.Size(47, 27);
             this.btnRemove.StyleController = this.layoutControlRight;
             this.btnRemove.TabIndex = 9;
             this.btnRemove.Text = "<<";
@@ -630,7 +633,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlGroupNDThuocNhom,
             this.layoutControlGroup5});
             this.layoutControlGroup2.Name = "Root";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(658, 588);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(841, 588);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlGroup3
@@ -639,7 +642,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlItem1});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(368, 568);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(474, 568);
             this.layoutControlGroup3.Text = "Danh sách người dùng";
             // 
             // layoutControlItem1
@@ -647,7 +650,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlItem1.Control = this.gridControlDSNguoiDung;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(344, 518);
+            this.layoutControlItem1.Size = new System.Drawing.Size(450, 518);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -656,9 +659,9 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlGroupNDThuocNhom.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem3,
             this.lbMaNhomND});
-            this.layoutControlGroupNDThuocNhom.Location = new System.Drawing.Point(426, 0);
+            this.layoutControlGroupNDThuocNhom.Location = new System.Drawing.Point(549, 0);
             this.layoutControlGroupNDThuocNhom.Name = "layoutControlGroupNDThuocNhom";
-            this.layoutControlGroupNDThuocNhom.Size = new System.Drawing.Size(212, 568);
+            this.layoutControlGroupNDThuocNhom.Size = new System.Drawing.Size(272, 568);
             this.layoutControlGroupNDThuocNhom.Text = "Người dùng thuộc nhóm";
             // 
             // layoutControlItem3
@@ -666,7 +669,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlItem3.Control = this.gridControlDSNDThuocMaNhomND;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 26);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(188, 492);
+            this.layoutControlItem3.Size = new System.Drawing.Size(248, 492);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -675,7 +678,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbMaNhomND.Control = this.lookUpEditNhomND;
             this.lbMaNhomND.Location = new System.Drawing.Point(0, 0);
             this.lbMaNhomND.Name = "lbMaNhomND";
-            this.lbMaNhomND.Size = new System.Drawing.Size(188, 26);
+            this.lbMaNhomND.Size = new System.Drawing.Size(248, 26);
             this.lbMaNhomND.Text = "Nhóm người dùng";
             this.lbMaNhomND.TextSize = new System.Drawing.Size(112, 17);
             // 
@@ -684,9 +687,9 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlGroup5.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem6,
             this.layoutControlItem5});
-            this.layoutControlGroup5.Location = new System.Drawing.Point(368, 0);
+            this.layoutControlGroup5.Location = new System.Drawing.Point(474, 0);
             this.layoutControlGroup5.Name = "layoutControlGroup5";
-            this.layoutControlGroup5.Size = new System.Drawing.Size(58, 568);
+            this.layoutControlGroup5.Size = new System.Drawing.Size(75, 568);
             this.layoutControlGroup5.Text = "Add/Remove";
             this.layoutControlGroup5.TextLocation = DevExpress.Utils.Locations.Default;
             // 
@@ -695,7 +698,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlItem6.Control = this.btnAdd;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(34, 31);
+            this.layoutControlItem6.Size = new System.Drawing.Size(51, 31);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -704,7 +707,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlItem5.Control = this.btnRemove;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 31);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(34, 487);
+            this.layoutControlItem5.Size = new System.Drawing.Size(51, 487);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -715,7 +718,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1314, 612);
+            this.Root.Size = new System.Drawing.Size(1497, 612);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem2
@@ -723,7 +726,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlItem2.Control = this.splitContainerControl1;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1294, 592);
+            this.layoutControlItem2.Size = new System.Drawing.Size(1477, 592);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -743,7 +746,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1324, 652);
+            this.ClientSize = new System.Drawing.Size(1507, 652);
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
