@@ -182,14 +182,15 @@ namespace QuanLyCuaHangBanLeLaptop
             this.colDiaChi});
             this.gridViewKhachHang.GridControl = this.gridControlKhachHang;
             this.gridViewKhachHang.Name = "gridViewKhachHang";
+            this.gridViewKhachHang.RowHeight = 30;
             // 
             // colMaKH
             // 
-            this.colMaKH.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.colMaKH.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colMaKH.AppearanceCell.Options.UseFont = true;
             this.colMaKH.AppearanceCell.Options.UseTextOptions = true;
             this.colMaKH.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colMaKH.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.colMaKH.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colMaKH.AppearanceHeader.Options.UseFont = true;
             this.colMaKH.AppearanceHeader.Options.UseTextOptions = true;
             this.colMaKH.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -204,10 +205,12 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colTenKH
             // 
-            this.colTenKH.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.colTenKH.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colTenKH.AppearanceCell.Options.UseFont = true;
-            this.colTenKH.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.colTenKH.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colTenKH.AppearanceHeader.Options.UseFont = true;
+            this.colTenKH.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTenKH.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTenKH.Caption = "TÊN KHÁCH HÀNG";
             this.colTenKH.FieldName = "name";
             this.colTenKH.MinWidth = 25;
@@ -219,11 +222,11 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colNgaySinh
             // 
-            this.colNgaySinh.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.colNgaySinh.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colNgaySinh.AppearanceCell.Options.UseFont = true;
             this.colNgaySinh.AppearanceCell.Options.UseTextOptions = true;
             this.colNgaySinh.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colNgaySinh.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.colNgaySinh.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colNgaySinh.AppearanceHeader.Options.UseFont = true;
             this.colNgaySinh.AppearanceHeader.Options.UseTextOptions = true;
             this.colNgaySinh.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -238,11 +241,11 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colGioiTinh
             // 
-            this.colGioiTinh.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.colGioiTinh.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colGioiTinh.AppearanceCell.Options.UseFont = true;
             this.colGioiTinh.AppearanceCell.Options.UseTextOptions = true;
             this.colGioiTinh.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colGioiTinh.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.colGioiTinh.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colGioiTinh.AppearanceHeader.Options.UseFont = true;
             this.colGioiTinh.AppearanceHeader.Options.UseTextOptions = true;
             this.colGioiTinh.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -257,11 +260,11 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colSDT
             // 
-            this.colSDT.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.colSDT.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colSDT.AppearanceCell.Options.UseFont = true;
             this.colSDT.AppearanceCell.Options.UseTextOptions = true;
             this.colSDT.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colSDT.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.colSDT.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colSDT.AppearanceHeader.Options.UseFont = true;
             this.colSDT.AppearanceHeader.Options.UseTextOptions = true;
             this.colSDT.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -276,10 +279,12 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colEmail
             // 
-            this.colEmail.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.colEmail.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colEmail.AppearanceCell.Options.UseFont = true;
-            this.colEmail.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.colEmail.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colEmail.AppearanceHeader.Options.UseFont = true;
+            this.colEmail.AppearanceHeader.Options.UseTextOptions = true;
+            this.colEmail.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colEmail.Caption = "EMAIL";
             this.colEmail.FieldName = "email";
             this.colEmail.MinWidth = 25;
@@ -291,10 +296,12 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colCCCD
             // 
-            this.colCCCD.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.colCCCD.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colCCCD.AppearanceCell.Options.UseFont = true;
-            this.colCCCD.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.colCCCD.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colCCCD.AppearanceHeader.Options.UseFont = true;
+            this.colCCCD.AppearanceHeader.Options.UseTextOptions = true;
+            this.colCCCD.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colCCCD.Caption = "CMND/CCCD";
             this.colCCCD.FieldName = "cmnd";
             this.colCCCD.MinWidth = 25;
@@ -306,11 +313,11 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colSLDaMua
             // 
-            this.colSLDaMua.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.colSLDaMua.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colSLDaMua.AppearanceCell.Options.UseFont = true;
             this.colSLDaMua.AppearanceCell.Options.UseTextOptions = true;
             this.colSLDaMua.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colSLDaMua.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.colSLDaMua.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colSLDaMua.AppearanceHeader.Options.UseFont = true;
             this.colSLDaMua.AppearanceHeader.Options.UseTextOptions = true;
             this.colSLDaMua.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -325,10 +332,12 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colTongTien
             // 
-            this.colTongTien.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.colTongTien.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colTongTien.AppearanceCell.Options.UseFont = true;
-            this.colTongTien.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.colTongTien.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colTongTien.AppearanceHeader.Options.UseFont = true;
+            this.colTongTien.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTongTien.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTongTien.Caption = "TỔNG TIỀN";
             this.colTongTien.DisplayFormat.FormatString = "{0:0,0}";
             this.colTongTien.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -342,10 +351,12 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // colDiaChi
             // 
-            this.colDiaChi.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.colDiaChi.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.colDiaChi.AppearanceCell.Options.UseFont = true;
-            this.colDiaChi.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.colDiaChi.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F);
             this.colDiaChi.AppearanceHeader.Options.UseFont = true;
+            this.colDiaChi.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDiaChi.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colDiaChi.Caption = "ĐỊA CHỈ";
             this.colDiaChi.FieldName = "Address";
             this.colDiaChi.MinWidth = 25;
@@ -395,10 +406,11 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlDetailKH.Size = new System.Drawing.Size(1178, 325);
             this.layoutControlDetailKH.TabIndex = 4;
             this.layoutControlDetailKH.Text = "layoutControl1";
+            this.layoutControlDetailKH.Visible = false;
             // 
             // layoutControl2
             // 
-            this.layoutControl2.Location = new System.Drawing.Point(289, 132);
+            this.layoutControl2.Location = new System.Drawing.Point(289, 72);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup4;
             this.layoutControl2.Size = new System.Drawing.Size(71, 24);
@@ -415,7 +427,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // txtCCCD
             // 
-            this.txtCCCD.Location = new System.Drawing.Point(489, 132);
+            this.txtCCCD.Location = new System.Drawing.Point(489, 72);
             this.txtCCCD.Name = "txtCCCD";
             this.txtCCCD.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
             this.txtCCCD.Properties.Appearance.Options.UseFont = true;
@@ -425,7 +437,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(137, 132);
+            this.txtSDT.Location = new System.Drawing.Point(137, 72);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
             this.txtSDT.Properties.Appearance.Options.UseFont = true;
@@ -435,7 +447,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // layoutControl3
             // 
-            this.layoutControl3.Location = new System.Drawing.Point(289, 190);
+            this.layoutControl3.Location = new System.Drawing.Point(289, 130);
             this.layoutControl3.Name = "layoutControl3";
             this.layoutControl3.Root = this.layoutControlGroup5;
             this.layoutControl3.Size = new System.Drawing.Size(71, 27);
@@ -452,11 +464,11 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(138, 222);
+            this.txtDiaChi.Location = new System.Drawing.Point(138, 162);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
             this.txtDiaChi.Properties.Appearance.Options.UseFont = true;
-            this.txtDiaChi.Size = new System.Drawing.Size(599, 76);
+            this.txtDiaChi.Size = new System.Drawing.Size(599, 61);
             this.txtDiaChi.StyleController = this.layoutControlDetailKH;
             this.txtDiaChi.TabIndex = 15;
             // 
@@ -467,7 +479,7 @@ namespace QuanLyCuaHangBanLeLaptop
             0,
             0,
             0});
-            this.txtTongTien.Location = new System.Drawing.Point(490, 191);
+            this.txtTongTien.Location = new System.Drawing.Point(490, 131);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
             this.txtTongTien.Properties.Appearance.Options.UseFont = true;
@@ -480,7 +492,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // numericUpDown3
             // 
             this.numericUpDown3.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.numericUpDown3.Location = new System.Drawing.Point(138, 191);
+            this.numericUpDown3.Location = new System.Drawing.Point(138, 131);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(146, 26);
             this.numericUpDown3.TabIndex = 13;
@@ -504,7 +516,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(138, 161);
+            this.txtEmail.Location = new System.Drawing.Point(138, 101);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
             this.txtEmail.Properties.Appearance.Options.UseFont = true;
@@ -514,20 +526,20 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // lookUpEditGioiTinh
             // 
-            this.lookUpEditGioiTinh.Location = new System.Drawing.Point(138, 103);
+            this.lookUpEditGioiTinh.Location = new System.Drawing.Point(503, 43);
             this.lookUpEditGioiTinh.Name = "lookUpEditGioiTinh";
             this.lookUpEditGioiTinh.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lookUpEditGioiTinh.Properties.Appearance.Options.UseFont = true;
             this.lookUpEditGioiTinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEditGioiTinh.Size = new System.Drawing.Size(599, 24);
+            this.lookUpEditGioiTinh.Size = new System.Drawing.Size(234, 24);
             this.lookUpEditGioiTinh.StyleController = this.layoutControlDetailKH;
             this.lookUpEditGioiTinh.TabIndex = 7;
             // 
             // deNgaySinh
             // 
             this.deNgaySinh.EditValue = null;
-            this.deNgaySinh.Location = new System.Drawing.Point(138, 73);
+            this.deNgaySinh.Location = new System.Drawing.Point(138, 43);
             this.deNgaySinh.Name = "deNgaySinh";
             this.deNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
             this.deNgaySinh.Properties.Appearance.Options.UseFont = true;
@@ -535,17 +547,17 @@ namespace QuanLyCuaHangBanLeLaptop
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgaySinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deNgaySinh.Size = new System.Drawing.Size(599, 24);
+            this.deNgaySinh.Size = new System.Drawing.Size(234, 24);
             this.deNgaySinh.StyleController = this.layoutControlDetailKH;
             this.deNgaySinh.TabIndex = 6;
             // 
             // txtTenKH
             // 
-            this.txtTenKH.Location = new System.Drawing.Point(138, 43);
+            this.txtTenKH.Location = new System.Drawing.Point(503, 13);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
             this.txtTenKH.Properties.Appearance.Options.UseFont = true;
-            this.txtTenKH.Size = new System.Drawing.Size(599, 24);
+            this.txtTenKH.Size = new System.Drawing.Size(234, 24);
             this.txtTenKH.StyleController = this.layoutControlDetailKH;
             this.txtTenKH.TabIndex = 5;
             // 
@@ -555,7 +567,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
             this.txtMaKH.Properties.Appearance.Options.UseFont = true;
-            this.txtMaKH.Size = new System.Drawing.Size(599, 24);
+            this.txtMaKH.Size = new System.Drawing.Size(234, 24);
             this.txtMaKH.StyleController = this.layoutControlDetailKH;
             this.txtMaKH.TabIndex = 4;
             // 
@@ -566,9 +578,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lbMaKH,
             this.emptySpaceItem1,
-            this.lbTenKH,
             this.lbNgaySinh,
-            this.lbGioiTinh,
             this.layoutControlItem4,
             this.lbEmail,
             this.lbSPDaMua,
@@ -577,7 +587,9 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlItem6,
             this.lbSDT,
             this.lbCCCD,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.lbTenKH,
+            this.lbGioiTinh});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1178, 325);
             this.layoutControlGroup1.TextVisible = false;
@@ -589,7 +601,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbMaKH.Control = this.txtMaKH;
             this.lbMaKH.Location = new System.Drawing.Point(0, 0);
             this.lbMaKH.Name = "lbMaKH";
-            this.lbMaKH.Size = new System.Drawing.Size(730, 30);
+            this.lbMaKH.Size = new System.Drawing.Size(365, 30);
             this.lbMaKH.Spacing = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.lbMaKH.Text = "Mã khách hàng";
             this.lbMaKH.TextSize = new System.Drawing.Size(122, 18);
@@ -597,9 +609,9 @@ namespace QuanLyCuaHangBanLeLaptop
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 291);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 216);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(730, 14);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(730, 89);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lbTenKH
@@ -607,9 +619,9 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbTenKH.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lbTenKH.AppearanceItemCaption.Options.UseFont = true;
             this.lbTenKH.Control = this.txtTenKH;
-            this.lbTenKH.Location = new System.Drawing.Point(0, 30);
+            this.lbTenKH.Location = new System.Drawing.Point(365, 0);
             this.lbTenKH.Name = "lbTenKH";
-            this.lbTenKH.Size = new System.Drawing.Size(730, 30);
+            this.lbTenKH.Size = new System.Drawing.Size(365, 30);
             this.lbTenKH.Spacing = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.lbTenKH.Text = "Tên khách hàng";
             this.lbTenKH.TextSize = new System.Drawing.Size(122, 18);
@@ -619,9 +631,9 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbNgaySinh.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lbNgaySinh.AppearanceItemCaption.Options.UseFont = true;
             this.lbNgaySinh.Control = this.deNgaySinh;
-            this.lbNgaySinh.Location = new System.Drawing.Point(0, 60);
+            this.lbNgaySinh.Location = new System.Drawing.Point(0, 30);
             this.lbNgaySinh.Name = "lbNgaySinh";
-            this.lbNgaySinh.Size = new System.Drawing.Size(730, 30);
+            this.lbNgaySinh.Size = new System.Drawing.Size(365, 30);
             this.lbNgaySinh.Spacing = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.lbNgaySinh.Text = "Ngày sinh";
             this.lbNgaySinh.TextSize = new System.Drawing.Size(122, 18);
@@ -631,9 +643,9 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbGioiTinh.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lbGioiTinh.AppearanceItemCaption.Options.UseFont = true;
             this.lbGioiTinh.Control = this.lookUpEditGioiTinh;
-            this.lbGioiTinh.Location = new System.Drawing.Point(0, 90);
+            this.lbGioiTinh.Location = new System.Drawing.Point(365, 30);
             this.lbGioiTinh.Name = "lbGioiTinh";
-            this.lbGioiTinh.Size = new System.Drawing.Size(730, 30);
+            this.lbGioiTinh.Size = new System.Drawing.Size(365, 30);
             this.lbGioiTinh.Spacing = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.lbGioiTinh.Text = "Giới tính";
             this.lbGioiTinh.TextSize = new System.Drawing.Size(122, 18);
@@ -652,7 +664,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbEmail.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lbEmail.AppearanceItemCaption.Options.UseFont = true;
             this.lbEmail.Control = this.txtEmail;
-            this.lbEmail.Location = new System.Drawing.Point(0, 148);
+            this.lbEmail.Location = new System.Drawing.Point(0, 88);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(730, 30);
             this.lbEmail.Spacing = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
@@ -664,7 +676,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbSPDaMua.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lbSPDaMua.AppearanceItemCaption.Options.UseFont = true;
             this.lbSPDaMua.Control = this.numericUpDown3;
-            this.lbSPDaMua.Location = new System.Drawing.Point(0, 178);
+            this.lbSPDaMua.Location = new System.Drawing.Point(0, 118);
             this.lbSPDaMua.Name = "lbSPDaMua";
             this.lbSPDaMua.Size = new System.Drawing.Size(277, 31);
             this.lbSPDaMua.Spacing = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
@@ -676,7 +688,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbTongTien.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lbTongTien.AppearanceItemCaption.Options.UseFont = true;
             this.lbTongTien.Control = this.txtTongTien;
-            this.lbTongTien.Location = new System.Drawing.Point(352, 178);
+            this.lbTongTien.Location = new System.Drawing.Point(352, 118);
             this.lbTongTien.Name = "lbTongTien";
             this.lbTongTien.Size = new System.Drawing.Size(378, 31);
             this.lbTongTien.Spacing = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
@@ -688,9 +700,9 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbDiaChi.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lbDiaChi.AppearanceItemCaption.Options.UseFont = true;
             this.lbDiaChi.Control = this.txtDiaChi;
-            this.lbDiaChi.Location = new System.Drawing.Point(0, 209);
+            this.lbDiaChi.Location = new System.Drawing.Point(0, 149);
             this.lbDiaChi.Name = "lbDiaChi";
-            this.lbDiaChi.Size = new System.Drawing.Size(730, 82);
+            this.lbDiaChi.Size = new System.Drawing.Size(730, 67);
             this.lbDiaChi.Spacing = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.lbDiaChi.Text = "Địa chỉ";
             this.lbDiaChi.TextSize = new System.Drawing.Size(122, 18);
@@ -698,7 +710,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.layoutControl3;
-            this.layoutControlItem6.Location = new System.Drawing.Point(277, 178);
+            this.layoutControlItem6.Location = new System.Drawing.Point(277, 118);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(75, 31);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
@@ -709,7 +721,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbSDT.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lbSDT.AppearanceItemCaption.Options.UseFont = true;
             this.lbSDT.Control = this.txtSDT;
-            this.lbSDT.Location = new System.Drawing.Point(0, 120);
+            this.lbSDT.Location = new System.Drawing.Point(0, 60);
             this.lbSDT.Name = "lbSDT";
             this.lbSDT.Size = new System.Drawing.Size(277, 28);
             this.lbSDT.Text = "Số điện thoại";
@@ -720,7 +732,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbCCCD.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lbCCCD.AppearanceItemCaption.Options.UseFont = true;
             this.lbCCCD.Control = this.txtCCCD;
-            this.lbCCCD.Location = new System.Drawing.Point(352, 120);
+            this.lbCCCD.Location = new System.Drawing.Point(352, 60);
             this.lbCCCD.Name = "lbCCCD";
             this.lbCCCD.Size = new System.Drawing.Size(378, 28);
             this.lbCCCD.Text = "CMND/CCCD";
@@ -729,7 +741,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.layoutControl2;
-            this.layoutControlItem5.Location = new System.Drawing.Point(277, 120);
+            this.layoutControlItem5.Location = new System.Drawing.Point(277, 60);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(75, 28);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);

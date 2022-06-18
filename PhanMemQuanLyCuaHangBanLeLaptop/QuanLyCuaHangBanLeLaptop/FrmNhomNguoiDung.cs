@@ -8,26 +8,20 @@ namespace QuanLyCuaHangBanLeLaptop
 {
     public partial class FrmNhomNguoiDung : DevExpress.XtraEditors.XtraForm
     {
+        #region Variable
         Message msg = new Message();
         BLLQLNNhomNguoiDung bllQLNND = new BLLQLNNhomNguoiDung();
         BLLNhomNguoiDung bllNhomND = new BLLNhomNguoiDung();
         BLLHamXuLyChung bllHamXuLy = new BLLHamXuLyChung();
         BLLNguoiDung bllNguoiDung = new BLLNguoiDung();
+        #endregion
         public FrmNhomNguoiDung()
         {
             InitializeComponent();
         }
 
-        private void FrmNhomNguoiDung_Load(object sender, EventArgs e)
-        {
-            loadNhomNguoiDung();
-            unenableText();
-            loadNguoiDung();
-            btnluu.Enabled = false;
-            btnXoa.Enabled = false;
-            btnAdd.Enabled = false;
-            btnRemove.Enabled = false;
-        }
+       
+        #region Method
         void loadNhomNguoiDung()
         {
             gridControlNhomND.DataSource = bllNhomND.lstGroup();
@@ -60,6 +54,20 @@ namespace QuanLyCuaHangBanLeLaptop
             txtTenNhom.Text = string.Empty;
             txtGhiChu.Text = string.Empty;
         }
+        #endregion
+
+
+        #region Event
+        private void FrmNhomNguoiDung_Load(object sender, EventArgs e)
+        {
+            loadNhomNguoiDung();
+            unenableText();
+            loadNguoiDung();
+            btnluu.Enabled = false;
+            btnXoa.Enabled = false;
+            btnAdd.Enabled = false;
+            btnRemove.Enabled = false;
+        }
         private void gridView_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             var maNhom = gridViewNhomQuyen.GetRowCellValue(gridViewNhomQuyen.FocusedRowHandle, gridViewNhomQuyen.Columns["MaNhom"]);
@@ -77,7 +85,6 @@ namespace QuanLyCuaHangBanLeLaptop
                 unenableText();
             }
         }
-
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             emptyText();
@@ -85,7 +92,6 @@ namespace QuanLyCuaHangBanLeLaptop
             txtMaNhom.Focus();
             btnluu.Enabled = true;
         }
-
         private void txtMaNhom_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == (char)Keys.Down)
@@ -93,7 +99,6 @@ namespace QuanLyCuaHangBanLeLaptop
                 txtTenNhom.Focus();
             }
         }
-
         private void txtTenNhom_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == (char)Keys.Up)
@@ -101,7 +106,6 @@ namespace QuanLyCuaHangBanLeLaptop
                 txtMaNhom.Focus();
             }
         }
-
         private void txtTenNhom_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == (char)Keys.Down)
@@ -109,7 +113,6 @@ namespace QuanLyCuaHangBanLeLaptop
                 txtGhiChu.Focus();
             }
         }
-
         private void txtGhiChu_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == (char)Keys.Up)
@@ -117,13 +120,11 @@ namespace QuanLyCuaHangBanLeLaptop
                 txtTenNhom.Focus();
             }
         }
-
         private void txtMaNhom_KeyPress(object sender, KeyPressEventArgs e)
         {
             string convert = bllHamXuLy.convertToUnSign(txtMaNhom.Text.Trim());
             txtMaNhom.Text = convert;
         }
-
         private void txtMaNhom_Leave(object sender, EventArgs e)
         {
             string convert = bllHamXuLy.convertToUnSign(txtMaNhom.Text.Trim());
@@ -149,32 +150,32 @@ namespace QuanLyCuaHangBanLeLaptop
             string tenNhom = txtTenNhom.Text.Trim();
             string ghiChu = txtGhiChu.Text.Trim();
             //Thêm mới
-            if(txtMaNhom.Enabled)
+            if (txtMaNhom.Enabled)
             {
-                if(maNhom ==string.Empty)
+                if (maNhom == string.Empty)
                 {
                     errProThongBao.SetError(txtMaNhom, lbMaNhom.Text + " không được để trống.");
                     return;
                     //acThongBao.Show(this, "Thông báo", lbMaNhom.Text + " không được để trống.","", Properties.Resources.warning_32x32, msg);
                 }
-                if(tenNhom == string.Empty)
+                if (tenNhom == string.Empty)
                 {
                     errProThongBao.SetError(txtMaNhom, lbTenNhom.Text + " không được để trống.");
                     return;
-                }  
+                }
                 else
                 {
                     //Kiểm tra khóa chính
-                    if(bllNhomND.checkKhoaChinh(maNhom))
+                    if (bllNhomND.checkKhoaChinh(maNhom))
                     {
-                        XtraMessageBox.Show(lbMaNhom.Text+ " đã tồn tại [ \""+txtMaNhom.Text+"\" already exists]", "Thông báo [Message]"
+                        XtraMessageBox.Show(lbMaNhom.Text + " đã tồn tại [ \"" + txtMaNhom.Text + "\" already exists]", "Thông báo [Message]"
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
                     bllNhomND.insert(maNhom, tenNhom, ghiChu);
                     acThongBao.Show(this, "Thông báo", "Thêm mới thành công."
-                        , "",Properties.Resources.success2___Copy, msg);
+                        , "", Properties.Resources.success2___Copy, msg);
                     loadNhomNguoiDung();
                     unenableText();
                     btnluu.Enabled = false;
@@ -182,7 +183,7 @@ namespace QuanLyCuaHangBanLeLaptop
                     btnSua.Enabled = false;
                     emptyText();
                 }
-            }    
+            }
             //Cập nhật
             else
             {
@@ -195,7 +196,7 @@ namespace QuanLyCuaHangBanLeLaptop
                 //btnXoa.Enabled = false;
                 btnSua.Enabled = false;
                 emptyText();
-            }    
+            }
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -243,9 +244,9 @@ namespace QuanLyCuaHangBanLeLaptop
         {
             var username = gridViewNguoiDung.GetRowCellValue(gridViewNguoiDung.FocusedRowHandle, gridViewNguoiDung.Columns["username"]);
             var maNhom = lookUpEditNhomND.EditValue.ToString();
-            
+
             //Kiểm tra user đã thuộc nhóm này hay chưa
-            if(bllNguoiDung.kiemTraNguoiDungTonTaiInNhomND(username.ToString(),maNhom.ToString())==true)
+            if (bllNguoiDung.kiemTraNguoiDungTonTaiInNhomND(username.ToString(), maNhom.ToString()) == true)
             {
                 XtraMessageBox.Show("Người dùng hiện đã có trong nhóm này.[User already exists in the group]", "Thông báo [Message]"
                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -264,7 +265,7 @@ namespace QuanLyCuaHangBanLeLaptop
                 XtraMessageBox.Show("Người dùng này đã thuộc nhóm khác.", "Thông báo [Message]"
                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }    
+            }
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -293,5 +294,11 @@ namespace QuanLyCuaHangBanLeLaptop
                 //do something  
             }
         }
+
+        private void lookUpEditNhomND_BeforePopup(object sender, EventArgs e)
+        {
+            loadNhomNguoiDung();
+        }
+        #endregion
     }
 }

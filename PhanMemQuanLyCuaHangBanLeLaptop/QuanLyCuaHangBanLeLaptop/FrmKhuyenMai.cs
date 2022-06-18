@@ -108,7 +108,7 @@ namespace QuanLyCuaHangBanLeLaptop
             }
             if (e.Column.FieldName == "date_end")
             {
-                DateTime ngayKT = Convert.ToDateTime(View.GetRowCellDisplayText(e.RowHandle, View.Columns["date_end"]));
+                DateTime ngayKT = Convert.ToDateTime(View.GetRowCellValue(e.RowHandle, View.Columns["date_end"]));
                 if (ngayKT < DateTime.Now)
                 {
                     e.Appearance.Font = new Font(e.Appearance.Font, FontStyle.Bold);

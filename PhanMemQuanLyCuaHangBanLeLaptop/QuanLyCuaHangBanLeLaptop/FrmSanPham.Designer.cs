@@ -766,6 +766,10 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbDonGia.Text = "Đơn giá";
             this.lbDonGia.TextSize = new System.Drawing.Size(107, 21);
             // 
+            // acThongBao
+            // 
+            this.acThongBao.AutoFormDelay = 1000;
+            // 
             // lcBottom
             // 
             this.lcBottom.Controls.Add(this.gridControlSanPham);

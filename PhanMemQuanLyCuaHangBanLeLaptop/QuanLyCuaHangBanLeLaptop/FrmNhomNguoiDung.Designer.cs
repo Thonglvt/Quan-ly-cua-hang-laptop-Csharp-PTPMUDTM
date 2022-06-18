@@ -494,6 +494,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lookUpEditNhomND.Size = new System.Drawing.Size(129, 22);
             this.lookUpEditNhomND.StyleController = this.layoutControlRight;
             this.lookUpEditNhomND.TabIndex = 10;
+            this.lookUpEditNhomND.BeforePopup += new System.EventHandler(this.lookUpEditNhomND_BeforePopup);
             this.lookUpEditNhomND.EditValueChanged += new System.EventHandler(this.lookUpEditNhomND_EditValueChanged);
             // 
             // btnAdd
@@ -737,6 +738,10 @@ namespace QuanLyCuaHangBanLeLaptop
             this.bar1.DockRow = 1;
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.Text = "Tools";
+            // 
+            // acThongBao
+            // 
+            this.acThongBao.AutoFormDelay = 1000;
             // 
             // errProThongBao
             // 

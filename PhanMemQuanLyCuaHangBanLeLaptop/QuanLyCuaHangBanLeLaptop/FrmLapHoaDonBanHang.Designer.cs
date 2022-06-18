@@ -64,8 +64,8 @@ namespace QuanLyCuaHangBanLeLaptop
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnTaoDH = new DevExpress.XtraBars.BarButtonItem();
-            this.btnLuu = new DevExpress.XtraBars.BarButtonItem();
             this.btnHuy = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLuu = new DevExpress.XtraBars.BarButtonItem();
             this.btnHuongDan = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -658,16 +658,6 @@ namespace QuanLyCuaHangBanLeLaptop
             this.btnTaoDH.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnTaoDH.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTaoDH_ItemClick);
             // 
-            // btnLuu
-            // 
-            this.btnLuu.Caption = "Xuất hóa đơn";
-            this.btnLuu.Id = 1;
-            this.btnLuu.ImageOptions.Image = global::QuanLyCuaHangBanLeLaptop.Properties.Resources.printer_16x161;
-            this.btnLuu.ImageOptions.LargeImage = global::QuanLyCuaHangBanLeLaptop.Properties.Resources.printer_32x321;
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.btnLuu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLuu_ItemClick);
-            // 
             // btnHuy
             // 
             this.btnHuy.Caption = "HỦy";
@@ -677,6 +667,16 @@ namespace QuanLyCuaHangBanLeLaptop
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnHuy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHuy_ItemClick);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Caption = "Xuất hóa đơn";
+            this.btnLuu.Id = 1;
+            this.btnLuu.ImageOptions.Image = global::QuanLyCuaHangBanLeLaptop.Properties.Resources.printer_16x161;
+            this.btnLuu.ImageOptions.LargeImage = global::QuanLyCuaHangBanLeLaptop.Properties.Resources.printer_32x321;
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnLuu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLuu_ItemClick);
             // 
             // btnHuongDan
             // 
@@ -848,6 +848,10 @@ namespace QuanLyCuaHangBanLeLaptop
             this.layoutControlItem1.Size = new System.Drawing.Size(85, 40);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // acThongBao
+            // 
+            this.acThongBao.AutoFormDelay = 1000;
             // 
             // repositoryItemGridLookUpEdit3
             // 
