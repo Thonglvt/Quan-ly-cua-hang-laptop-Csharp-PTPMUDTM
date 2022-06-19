@@ -143,7 +143,7 @@ namespace QuanLyCuaHangBanLeLaptop
             // searchLookUpEditKH
             // 
             this.searchLookUpEditKH.EditValue = "[EditrttValue is null]";
-            this.searchLookUpEditKH.Location = new System.Drawing.Point(155, 53);
+            this.searchLookUpEditKH.Location = new System.Drawing.Point(179, 53);
             this.searchLookUpEditKH.Name = "searchLookUpEditKH";
             this.searchLookUpEditKH.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.searchLookUpEditKH.Properties.Appearance.Options.UseFont = true;
@@ -151,7 +151,7 @@ namespace QuanLyCuaHangBanLeLaptop
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.searchLookUpEditKH.Properties.NullText = "Chọn khách hàng";
             this.searchLookUpEditKH.Properties.PopupView = this.searchLookUpEditKHView;
-            this.searchLookUpEditKH.Size = new System.Drawing.Size(799, 30);
+            this.searchLookUpEditKH.Size = new System.Drawing.Size(775, 30);
             this.searchLookUpEditKH.StyleController = this.layoutControlMain;
             this.searchLookUpEditKH.TabIndex = 6;
             this.searchLookUpEditKH.BeforePopup += new System.EventHandler(this.searchLookUpEdit1_BeforePopup);
@@ -167,7 +167,6 @@ namespace QuanLyCuaHangBanLeLaptop
             this.searchLookUpEditKHView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEditKHView.Name = "searchLookUpEditKHView";
             this.searchLookUpEditKHView.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.searchLookUpEditKHView.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
             this.searchLookUpEditKHView.OptionsView.ShowGroupPanel = false;
             this.searchLookUpEditKHView.RowHeight = 30;
             this.searchLookUpEditKHView.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.searchLookUpEdit1View_RowCellClick);
@@ -602,12 +601,12 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(1113, 50);
+            this.txtSearch.Location = new System.Drawing.Point(1137, 50);
             this.txtSearch.MenuManager = this.barManager1;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtSearch.Properties.Appearance.Options.UseFont = true;
-            this.txtSearch.Size = new System.Drawing.Size(238, 30);
+            this.txtSearch.Size = new System.Drawing.Size(188, 30);
             this.txtSearch.StyleController = this.layoutControlMain;
             this.txtSearch.TabIndex = 4;
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
@@ -736,12 +735,12 @@ namespace QuanLyCuaHangBanLeLaptop
             // 
             this.btnSearch.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btnSearch.Appearance.Options.UseFont = true;
-            this.btnSearch.Location = new System.Drawing.Point(1355, 50);
+            this.btnSearch.Location = new System.Drawing.Point(1329, 50);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(81, 29);
+            this.btnSearch.Size = new System.Drawing.Size(107, 29);
             this.btnSearch.StyleController = this.layoutControlMain;
             this.btnSearch.TabIndex = 5;
-            this.btnSearch.Text = "Tra cứu";
+            this.btnSearch.Text = "Thêm KH";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // layoutControlGroup1
@@ -816,7 +815,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbKH.Size = new System.Drawing.Size(937, 40);
             this.lbKH.Text = "Khách hàng";
             this.lbKH.TextLocation = DevExpress.Utils.Locations.Left;
-            this.lbKH.TextSize = new System.Drawing.Size(125, 24);
+            this.lbKH.TextSize = new System.Drawing.Size(149, 24);
             // 
             // lbTraCuu
             // 
@@ -827,7 +826,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbTraCuu.Location = new System.Drawing.Point(961, 0);
             this.lbTraCuu.Name = "lbTraCuu";
             this.lbTraCuu.Size = new System.Drawing.Size(479, 90);
-            this.lbTraCuu.Text = "Tra cứu khách hàng";
+            this.lbTraCuu.Text = "Khách hàng mới";
             // 
             // lbSearch
             // 
@@ -836,16 +835,16 @@ namespace QuanLyCuaHangBanLeLaptop
             this.lbSearch.Control = this.txtSearch;
             this.lbSearch.Location = new System.Drawing.Point(0, 0);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(370, 40);
-            this.lbSearch.Text = "Tra cứu";
-            this.lbSearch.TextSize = new System.Drawing.Size(125, 24);
+            this.lbSearch.Size = new System.Drawing.Size(344, 40);
+            this.lbSearch.Text = "Số điện thoại KH";
+            this.lbSearch.TextSize = new System.Drawing.Size(149, 24);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.btnSearch;
-            this.layoutControlItem1.Location = new System.Drawing.Point(370, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(344, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(85, 40);
+            this.layoutControlItem1.Size = new System.Drawing.Size(111, 40);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 

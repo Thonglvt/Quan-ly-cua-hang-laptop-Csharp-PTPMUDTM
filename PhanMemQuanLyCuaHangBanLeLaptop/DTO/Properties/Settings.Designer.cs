@@ -26,8 +26,8 @@ namespace DTO.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MMT-LEVANTHONG\\SQLEXPRESS;Initial Catalog=QL_Laptop;Persist Security " +
-            "Info=True;User ID=sa;Password=123")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MMT-LEVANTHONG\\SQLEXPRESS;Initial Catalog=QL_Laptop;Integrated Securi" +
+            "ty=True")]
         public string QL_LaptopConnectionString {
             get {
                 return ((string)(this["QL_LaptopConnectionString"]));

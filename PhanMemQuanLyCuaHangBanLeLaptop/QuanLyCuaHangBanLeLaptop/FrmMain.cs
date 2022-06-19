@@ -22,20 +22,9 @@ namespace QuanLyCuaHangBanLeLaptop
         {
             InitializeComponent();
         }
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-            skin();
-            AddOrUpdateChucNangHeThong();
-            loadRights();
-            lbThongTinNhanVien.Caption = "( " + DTOSession.MaNhanVien + " - " 
-                                                + DTOSession.TenNhanVien + " )";
-        }
-        private void btnSanPham_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            addForm(typeof(FrmSanPham));
-        }
+        
 
-
+        #region Method
         //--------------------Các hàm xử lý trên form-----------
         //Set giao diện mặc định cho form main
         void skin()
@@ -61,7 +50,6 @@ namespace QuanLyCuaHangBanLeLaptop
             f.MdiParent = this;
             f.Show();
         }
-
         void AddOrUpdateChucNangHeThong()
         {
             //Vào menu tổng
@@ -136,6 +124,20 @@ namespace QuanLyCuaHangBanLeLaptop
                 }
             }
         }
+        #endregion
+        #region Event
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            skin();
+            AddOrUpdateChucNangHeThong();
+            loadRights();
+            lbThongTinNhanVien.Caption = "( " + DTOSession.MaNhanVien + " - "
+                                                + DTOSession.TenNhanVien + " )";
+        }
+        private void btnSanPham_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            addForm(typeof(FrmSanPham));
+        }
         private void cn020202_ItemClick(object sender, ItemClickEventArgs e)
         {
             addForm(typeof(FrmPhanQuyen));
@@ -191,5 +193,8 @@ namespace QuanLyCuaHangBanLeLaptop
         {
             addForm(typeof(FrmHoaDonBanHang));
         }
+        #endregion
+
+
     }
 }

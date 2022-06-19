@@ -17,6 +17,7 @@ namespace QuanLyCuaHangBanLeLaptop
     {
         BLLNguoiDung bllTaiKhoan = new BLLNguoiDung();
         BLLNhanVien bllNhanVien = new BLLNhanVien();
+        CauHinh cauHinh;
         public FrmDangNhap()
         {
             InitializeComponent();
@@ -66,33 +67,55 @@ namespace QuanLyCuaHangBanLeLaptop
             }
             else
             {
-                //Kiểm tra Account tồn tại
-                if (bllTaiKhoan.kiemTraDangNhap(username, password))
+                cauHinh = new CauHinh();
+                int kq = cauHinh.check_Config();
+                if (kq == 0)
                 {
-                    XtraMessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
-                    DTOGroupUser.GroupUser = username;
-                    Employee empl = bllNhanVien.getNhanVienTheoUsername(username);
-                    DTOSession.MaNhanVien = empl.id;
-                    DTOSession.TenNhanVien = empl.name;
-                    DTOSession.NgaySinh = (DateTime)empl.birthday;
-                    DTOSession.GioiTinh = empl.gender;
-                    DTOSession.SoDienThoai = empl.phone;
-                    DTOSession.Email = empl.email;
-                    DTOSession.CCCD = empl.cmnd;
-                    DTOSession.Luong = Convert.ToInt32(empl.salary);
-                    DTOSession.Hinh = empl.avatar;
-                    DTOSession.NgayVaoLam = (DateTime)empl.hire_date;
-                    DTOSession.Username = empl.username;
-
-                    FrmMain frmMain = new FrmMain();
-                    frmMain.Show();
-                    Hide();
+                    XtraMessageBox.Show("Chuỗi cấu hình không tồn tại!", "Thông báo [Message]", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    ProcessConfig();
+                    return;
                 }
-                else
-                XtraMessageBox.Show("Tài khoản hoặc mật khẩu không chính xác", "Thông báo [Message]", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (kq == 2)
+                {
+                    XtraMessageBox.Show("Chuỗi cấu hình không phù hợp!", "Thông báo [Message]", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    ProcessConfig();
+                    return;
+                }
+                if (kq == 1)
+                {
+                    //Kiểm tra Account tồn tại
+                    if (bllTaiKhoan.kiemTraDangNhap(username, password))
+                    {
+                        XtraMessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
+                        DTOGroupUser.GroupUser = username;
+                        Employee empl = bllNhanVien.getNhanVienTheoUsername(username);
+                        DTOSession.MaNhanVien = empl.id;
+                        DTOSession.TenNhanVien = empl.name;
+                        DTOSession.NgaySinh = (DateTime)empl.birthday;
+                        DTOSession.GioiTinh = empl.gender;
+                        DTOSession.SoDienThoai = empl.phone;
+                        DTOSession.Email = empl.email;
+                        DTOSession.CCCD = empl.cmnd;
+                        DTOSession.Luong = Convert.ToInt32(empl.salary);
+                        DTOSession.Hinh = empl.avatar;
+                        DTOSession.NgayVaoLam = (DateTime)empl.hire_date;
+                        DTOSession.Username = empl.username;
+
+                        FrmMain frmMain = new FrmMain();
+                        frmMain.Show();
+                        Hide();
+                    }
+                    else
+                        XtraMessageBox.Show("Tài khoản hoặc mật khẩu không chính xác", "Thông báo [Message]", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
         }
-
+        public void ProcessConfig()
+        {
+            FrmCauHinh frm = new FrmCauHinh();
+            frm.ShowDialog();
+        }
         private void btnThoat_Click(object sender, EventArgs e)
         {
             if (XtraMessageBox.Show("Xác nhận thoát?", "Thông báo [Message]", MessageBoxButtons.YesNo, MessageBoxIcon.None) == DialogResult.Yes)

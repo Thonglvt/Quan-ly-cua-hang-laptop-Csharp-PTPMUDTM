@@ -144,31 +144,34 @@ namespace QuanLyCuaHangBanLeLaptop
                 FrmDiaLogSoLuong frm = new FrmDiaLogSoLuong(maSP.ToString(), tenSP.ToString(),Convert.ToInt32(soLuong));
                 frm.guiFormCha = new FrmDiaLogSoLuong.GETDATA(getSoLuongFromFromCon);
                 frm.ShowDialog();
-                //Kiểm tra sản phẩm tồn tại chưa: nếu Có (Số lượng + 1)
-                foreach (var item in lstSPKhuyenMai_CTHD)
+                if (this.soLuongTmp != 0)
                 {
-                    if (item.MaSP.Equals(maSP.ToString()))
+                    //Kiểm tra sản phẩm tồn tại chưa: nếu Có (Số lượng + So luong mua)
+                    foreach (var item in lstSPKhuyenMai_CTHD)
                     {
-                        item.SoLuong += this.soLuongTmp;
-                        item.ThanhTien = item.SoLuong * item.GiaBan;
-                        gridControlCTDH.RefreshDataSource();
-                        //Giảm số lượng sản phẩm
-                        prod.SoLuong = (prod != null) ? prod.SoLuong - this.soLuongTmp : prod.SoLuong;
-                        gridControlSanPhamKM.RefreshDataSource();
-                        return;
+                        if (item.MaSP.Equals(maSP.ToString()))
+                        {
+                            item.SoLuong += this.soLuongTmp;
+                            item.ThanhTien = item.SoLuong * item.GiaBan;
+                            gridControlCTDH.RefreshDataSource();
+                            //Giảm số lượng sản phẩm
+                            prod.SoLuong = (prod != null) ? prod.SoLuong - this.soLuongTmp : prod.SoLuong;
+                            gridControlSanPhamKM.RefreshDataSource();
+                            return;
+                        }
                     }
-                }
-                DTOSanPhamKhuyenMai sp = new DTOSanPhamKhuyenMai();
-                sp.MaSP = maSP.ToString();
-                sp.SoLuong = this.soLuongTmp;
-                sp.GiaBan = Convert.ToInt32(Gia);
-                sp.ThanhTien = sp.GiaBan;
-                prod.SoLuong = (prod != null) ? prod.SoLuong - this.soLuongTmp : prod.SoLuong;
-                //Add giỏ hàng
-                lstSPKhuyenMai_CTHD.Add(sp);
+                    DTOSanPhamKhuyenMai sp = new DTOSanPhamKhuyenMai();
+                    sp.MaSP = maSP.ToString();
+                    sp.SoLuong = this.soLuongTmp;
+                    sp.GiaBan = Convert.ToInt32(Gia);
+                    sp.ThanhTien = sp.GiaBan;
+                    prod.SoLuong = (prod != null) ? prod.SoLuong - this.soLuongTmp : prod.SoLuong;
+                    //Add giỏ hàng
+                    lstSPKhuyenMai_CTHD.Add(sp);
 
-                gridControlCTDH.RefreshDataSource();
-                gridControlSanPhamKM.RefreshDataSource();
+                    gridControlCTDH.RefreshDataSource();
+                    gridControlSanPhamKM.RefreshDataSource();
+                }
             }
 
 
@@ -280,8 +283,8 @@ namespace QuanLyCuaHangBanLeLaptop
             //btnLuu.Enabled = !btnLuu.Enabled;
             //colThemSPVaoDH.Visible = !colThemSPVaoDH.Visible;
             dongMoThaoTac();
-            //this.DonHang.employee_id = DTOSession.MaNhanVien;
-            this.DonHang.employee_id = "30102021NV000003";
+            this.DonHang.employee_id = DTOSession.MaNhanVien;
+            //this.DonHang.employee_id = "30102021NV000003";
             var s = searchLookUpEditKHView.GetRowCellValue(searchLookUpEditKHView.FocusedRowHandle, searchLookUpEditKHView.Columns["id"]);
             this.DonHang.customer_id = searchLookUpEditKH.EditValue.ToString();
             this.DonHang.date_ = DateTime.Now;

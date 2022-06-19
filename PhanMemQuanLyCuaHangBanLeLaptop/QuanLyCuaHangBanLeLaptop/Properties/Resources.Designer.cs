@@ -673,6 +673,16 @@ namespace QuanLyCuaHangBanLeLaptop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap deletedatasource_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("deletedatasource_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap deletelist_16x16 {
             get {
                 object obj = ResourceManager.GetObject("deletelist_16x16", resourceCulture);
@@ -1031,6 +1041,16 @@ namespace QuanLyCuaHangBanLeLaptop.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap managedatasource_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("managedatasource_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage markcomplete {
@@ -1256,6 +1276,16 @@ namespace QuanLyCuaHangBanLeLaptop.Properties {
         internal static System.Drawing.Bitmap removepivotfield_32x32 {
             get {
                 object obj = ResourceManager.GetObject("removepivotfield_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap removepivotfield_32x321 {
+            get {
+                object obj = ResourceManager.GetObject("removepivotfield_32x321", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

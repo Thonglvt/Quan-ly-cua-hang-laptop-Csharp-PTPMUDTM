@@ -484,7 +484,6 @@ E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLa
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\bin\Debug\es\DevExpress.XtraNavBar.v19.2.resources.dll
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\bin\Debug\ja\DevExpress.XtraNavBar.v19.2.resources.dll
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\bin\Debug\ru\DevExpress.XtraNavBar.v19.2.resources.dll
-E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\obj\Debug\GUI.csproj.AssemblyReference.cache
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\obj\Debug\QuanLyCuaHangBanLeLaptop.DialogThemKhachHangMoi.resources
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\obj\Debug\QuanLyCuaHangBanLeLaptop.FrmDangNhap.resources
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\obj\Debug\QuanLyCuaHangBanLeLaptop.FrmHoaDonBanHang.resources
@@ -509,3 +508,5 @@ E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLa
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\obj\Debug\QuanLyCuaHangBanLeLaptop.FrmDiaLogSoLuong.resources
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\obj\Debug\QuanLyCuaHangBanLeLaptop.FrmPrint.resources
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\bin\Debug\BLL.dll
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\obj\Debug\QuanLyCuaHangBanLeLaptop.FrmCauHinh.resources
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\obj\Debug\GUI.csproj.AssemblyReference.cache

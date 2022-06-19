@@ -16,3 +16,4 @@ E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLa
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DAL\obj\Debug\DAL.dll
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DAL\obj\Debug\DAL.pdb
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache

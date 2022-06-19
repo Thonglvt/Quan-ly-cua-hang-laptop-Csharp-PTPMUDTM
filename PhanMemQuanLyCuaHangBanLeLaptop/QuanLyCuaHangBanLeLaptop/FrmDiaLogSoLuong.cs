@@ -29,6 +29,10 @@ namespace QuanLyCuaHangBanLeLaptop
         #region Event
         private void btnExit_Click(object sender, EventArgs e)
         {
+            if (guiFormCha != null)
+            {
+                guiFormCha(0);
+            }
             this.Close();
         }
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -51,7 +55,7 @@ namespace QuanLyCuaHangBanLeLaptop
             if (guiFormCha != null)
             {
                 guiFormCha(Convert.ToInt32(txtSoLuong.Value));
-                btnExit.PerformClick();
+                this.Close();
             }    
                 
         }

@@ -131,8 +131,8 @@
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
             this.BackgroundImageStore = global::QuanLyCuaHangBanLeLaptop.Properties.Resources.background_Login1;
             this.ClientSize = new System.Drawing.Size(519, 301);
-            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.groupControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

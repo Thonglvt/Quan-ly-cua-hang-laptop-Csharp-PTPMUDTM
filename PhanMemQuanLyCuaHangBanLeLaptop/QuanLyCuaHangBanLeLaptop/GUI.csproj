@@ -105,11 +105,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CauHinh.cs" />
     <Compile Include="DialogThemKhachHangMoi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DialogThemKhachHangMoi.Designer.cs">
       <DependentUpon>DialogThemKhachHangMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCauHinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCauHinh.Designer.cs">
+      <DependentUpon>FrmCauHinh.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDangNhap.cs">
       <SubType>Form</SubType>
@@ -203,6 +210,9 @@
     </Compile>
     <EmbeddedResource Include="DialogThemKhachHangMoi.resx">
       <DependentUpon>DialogThemKhachHangMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCauHinh.resx">
+      <DependentUpon>FrmCauHinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDangNhap.resx">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
@@ -533,6 +543,9 @@
     <None Include="Resources\setdetaillevel.svg" />
     <None Include="Resources\initialstate_32x32.png" />
     <None Include="Resources\chartyaxissettings_32x32.png" />
+    <None Include="Resources\removepivotfield_32x321.png" />
+    <None Include="Resources\deletedatasource_32x32.png" />
+    <None Include="Resources\managedatasource_32x32.png" />
     <Content Include="Resources\success2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
