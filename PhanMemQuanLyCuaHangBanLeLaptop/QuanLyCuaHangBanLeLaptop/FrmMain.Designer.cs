@@ -165,6 +165,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.cn020101.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cn020101.ImageOptions.SvgImage")));
             this.cn020101.Name = "cn020101";
             this.cn020101.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.cn020101.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.cn020101_ItemClick);
             // 
             // barCheckItem1
             // 
@@ -179,6 +180,7 @@ namespace QuanLyCuaHangBanLeLaptop
             this.cn020102.Id = 8;
             this.cn020102.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cn020102.ImageOptions.SvgImage")));
             this.cn020102.Name = "cn020102";
+            this.cn020102.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.cn020102_ItemClick);
             // 
             // cn020103
             // 

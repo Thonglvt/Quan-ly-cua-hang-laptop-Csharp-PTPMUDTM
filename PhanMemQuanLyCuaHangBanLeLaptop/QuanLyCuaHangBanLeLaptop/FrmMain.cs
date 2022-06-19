@@ -193,6 +193,17 @@ namespace QuanLyCuaHangBanLeLaptop
         {
             addForm(typeof(FrmHoaDonBanHang));
         }
+        private void cn020101_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //addForm(typeof(FrmThongTinCaNhan));
+            FrmThongTinCaNhan frm = new FrmThongTinCaNhan();
+            frm.ShowDialog();
+        }
+        private void cn020102_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmDoiMatKhau frm = new FrmDoiMatKhau();
+            frm.ShowDialog();
+        }
         #endregion
 
 

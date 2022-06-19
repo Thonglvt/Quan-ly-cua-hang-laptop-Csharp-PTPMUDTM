@@ -27,5 +27,15 @@ namespace BLL
             dalNhanVien = new DALNhanVien();
             return dalNhanVien.getAll_NV();
         }
+        public string insert(Employee pNhanVien)
+        {
+            dalNhanVien = new DALNhanVien();
+            return dalNhanVien.insert(pNhanVien);
+        }
+        public string update(Employee pNhanVien)
+        {
+            dalNhanVien = new DALNhanVien();
+            return dalNhanVien.update(pNhanVien);
+        }
     }
 }

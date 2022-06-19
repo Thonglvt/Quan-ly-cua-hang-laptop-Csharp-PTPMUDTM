@@ -130,6 +130,12 @@
     <Compile Include="FrmDiaLogSoLuong.Designer.cs">
       <DependentUpon>FrmDiaLogSoLuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDoiMatKhau.Designer.cs">
+      <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHoaDonBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,12 @@
     <Compile Include="FrmSanPham.Designer.cs">
       <DependentUpon>FrmSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThongTinCaNhan.Designer.cs">
+      <DependentUpon>FrmThongTinCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="InvoiceReport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -220,6 +232,9 @@
     <EmbeddedResource Include="FrmDiaLogSoLuong.resx">
       <DependentUpon>FrmDiaLogSoLuong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDoiMatKhau.resx">
+      <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmHoaDonBanHang.resx">
       <DependentUpon>FrmHoaDonBanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSanPham.resx">
       <DependentUpon>FrmSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThongTinCaNhan.resx">
+      <DependentUpon>FrmThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InvoiceReport.resx">
       <DependentUpon>InvoiceReport.cs</DependentUpon>
@@ -546,6 +564,13 @@
     <None Include="Resources\removepivotfield_32x321.png" />
     <None Include="Resources\deletedatasource_32x32.png" />
     <None Include="Resources\managedatasource_32x32.png" />
+    <None Include="Resources\pencolor.svg" />
+    <None Include="Resources\save as2.svg" />
+    <None Include="Resources\clearheaderandfooter.svg" />
+    <None Include="Resources\paymentrefund2.svg" />
+    <None Include="Resources\delete1.svg" />
+    <None Include="Resources\clearheaderandfooter1.svg" />
+    <None Include="Resources\checkbox3.svg" />
     <Content Include="Resources\success2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

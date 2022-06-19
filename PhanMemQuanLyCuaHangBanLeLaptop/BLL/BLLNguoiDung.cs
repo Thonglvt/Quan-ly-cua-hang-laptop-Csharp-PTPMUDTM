@@ -13,6 +13,7 @@ namespace BLL
         DALNguoiDung dalNguoiDung;
 
         public BLLNguoiDung() { }
+
         public bool kiemTraDangNhap(string user,string pass)
         {
             dalNguoiDung = new DALNguoiDung();
@@ -81,6 +82,11 @@ namespace BLL
         {
             dalNguoiDung = new DALNguoiDung();
             return dalNguoiDung.insert(pTaiKhoan);
+        }
+        public string updatePass(Account pTaiKhoan)
+        {
+            dalNguoiDung = new DALNguoiDung();
+            return dalNguoiDung.updatePass(pTaiKhoan);
         }
     }
 }

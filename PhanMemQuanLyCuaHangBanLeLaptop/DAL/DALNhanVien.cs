@@ -33,5 +33,41 @@ namespace DAL
             return emplDefault;
         }
 
+        public string insert(Employee pNhanVien)
+        {
+            db = new QL_LaptopDataContext();
+            try
+            {
+                db.Employees.InsertOnSubmit(pNhanVien);
+                db.SubmitChanges();
+                return "1";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
+        public string update(Employee pNhanVien)
+        {
+            db = new QL_LaptopDataContext();
+            try
+            {
+                var nv = db.Employees.FirstOrDefault(t => t.id == pNhanVien.id);
+                nv.name = pNhanVien.name;
+                nv.gender = pNhanVien.gender;
+                nv.birthday = pNhanVien.birthday;
+                nv.phone = pNhanVien.phone;
+                nv.email = pNhanVien.email;
+                nv.cmnd = pNhanVien.cmnd;
+
+                db.SubmitChanges();
+                return "1";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
+
     }
 }

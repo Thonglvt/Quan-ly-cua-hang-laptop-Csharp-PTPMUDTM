@@ -78,6 +78,21 @@ namespace DAL
                 return ex.Message;
             }
         }
+        public string updatePass(Account pTaiKhoan)
+        {
+            try
+            {  
+                db = new QL_LaptopDataContext();
+                var tk = db.Accounts.FirstOrDefault(t => t.username == pTaiKhoan.username);
+                tk.password = pTaiKhoan.password;
 
+                db.SubmitChanges();
+                return "1";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
     }
 }

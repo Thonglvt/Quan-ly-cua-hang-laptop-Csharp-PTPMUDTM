@@ -510,3 +510,5 @@ E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLa
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\bin\Debug\BLL.dll
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\obj\Debug\QuanLyCuaHangBanLeLaptop.FrmCauHinh.resources
 E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\obj\Debug\GUI.csproj.AssemblyReference.cache
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\obj\Debug\QuanLyCuaHangBanLeLaptop.FrmThongTinCaNhan.resources
+E:\PTPM&UDTM\Quan-ly-cua-hang-laptop-Csharp-PTPMUDTM\PhanMemQuanLyCuaHangBanLeLaptop\QuanLyCuaHangBanLeLaptop\obj\Debug\QuanLyCuaHangBanLeLaptop.FrmDoiMatKhau.resources
